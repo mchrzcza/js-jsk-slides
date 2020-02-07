@@ -1,9 +1,9 @@
 /* Deafult reveal.js stylesheet */
-@import "../lib/reveal.js/css/reset.css";
-@import "../lib/reveal.js/css/reveal.css";
+@import "./lib/reveal.js/css/reset.css";
+@import "./lib/reveal.js/css/reveal.css";
 
 /* Theme used for slides */
-@import "../lib/reveal.js/css/theme/black.css";
+@import "./lib/reveal.js/css/theme/black.css";
 /* @import "../lib/reveal.js/css/theme/beige.css"; */
 /* @import "../lib/reveal.js/css/theme/blood.css"; */
 /* @import "../lib/reveal.js/css/theme/league.css"; */
@@ -16,10 +16,10 @@
 /* @import "../lib/reveal.js/css/theme/white.css"; */
 
 /* Theme used for syntax highlighting of code */
-@import "../lib/reveal.js/css/highlighting/monokai.css";
-@import "../lib/reveal.js/css/highlighting/zenburn.css";
+@import "./lib/reveal.js/css/highlighting/monokai.css";
+@import "./lib/reveal.js/css/highlighting/zenburn.css";
 
 /* Style used for printing to pdf and on paper */
 
-@import "../lib/reveal.js/css/print/paper.css";
+@import "./lib/reveal.js/css/print/paper.css";
 /* @import "../lib/reveal.js/css/print/pdf.css"; */
