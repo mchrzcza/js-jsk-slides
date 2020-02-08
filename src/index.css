@@ -17,7 +17,7 @@
 
 /* Theme used for syntax highlighting of code */
 @import "./lib/reveal.js/css/highlighting/monokai.css";
-@import "./lib/reveal.js/css/highlighting/zenburn.css";
+/* @import "./lib/reveal.js/css/highlighting/zenburn.css"; */
 
 /* Style used for printing to pdf and on paper */
 
