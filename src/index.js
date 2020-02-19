@@ -6,6 +6,7 @@ window.onload = () => {
     progress: true,
     center: true,
     hash: true,
+    hideInactiveCursor: false,
     transition: TRANSITION.SLIDE,
     dependencies: [
       ...DEPENDENCIES.markdown(),
