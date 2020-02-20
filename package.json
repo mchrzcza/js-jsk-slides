@@ -2,9 +2,9 @@
   "name": "js-jsk-slides",
   "version": "1.0.0",
   "description": "",
-  "homepage": "",
+  "homepage": "https://obryko.github.io/js-jsk-slides",
   "scripts": {
-    "start": "parcel ./src/index.html",
+    "start": "parcel ./src/index.html --open",
     "build": "parcel build ./src/index.html --public-url ./"
   },
   "author": {
