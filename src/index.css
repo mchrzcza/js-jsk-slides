@@ -90,3 +90,30 @@ pre {
 #project-configuration span {
   font-size: 36px;
 }
+
+.small-pre {
+  max-height: 150px;
+}
+
+.error > span {
+  color: red !important;
+}
+
+pre.margined {
+  margin: 20px auto !important;
+}
+
+.align-div {
+  display: flex !important;
+  flex-direction: column !important;
+  padding-left: 76px !important;
+}
+
+.code-ul {
+  list-style-type: none !important;
+  width: inherit;
+}
+
+.code-ul > li {
+  margin: 10px 0;
+}
