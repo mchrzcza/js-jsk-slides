@@ -6,6 +6,8 @@ window.onload = () => {
     progress: true,
     center: true,
     hash: true,
+    slideNumber: 'c/t',
+    hideInactiveCursor: false,
     transition: TRANSITION.SLIDE,
     dependencies: [
       ...DEPENDENCIES.markdown(),

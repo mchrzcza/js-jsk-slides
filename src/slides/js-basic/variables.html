@@ -1,0 +1,120 @@
+<section id="variables">
+  <span class="go-to-github-example">
+    <a href="https://github.com/Obryko/js-jsk-examples/blob/master/1-variablesAndScope/variable.js" target="_blank">
+      <img class="example-image" src="https://static.thenounproject.com/png/2075975-200.png">
+    </a>
+  </span>
+  <h4>Zmienne</h4>
+  <pre class="fragment fade-right">
+    <code class="javascript hljs">
+      var bad = [];
+      bad = "Test";
+      var bad = 5;
+    </code>
+  </pre>
+  <pre class="fragment fade-right">
+    <code class="javascript hljs">
+      const foo = "";
+      foo = 5; // Error: Assign to constant variable;
+    </code>
+  </pre>
+  <pre class="fragment fade-right">
+    <code class="javascript hljs">
+      let bar = 1;
+      bar = 5;
+      let bat = 4; // Error 
+    </code>
+  </pre>
+</section>
+<section id="types">
+  <span class="go-to-github-example">
+    <a href="https://github.com/Obryko/js-jsk-examples/blob/master/1-variablesAndScope/types.js" target="_blank">
+      <img class="example-image" src="https://static.thenounproject.com/png/2075975-200.png">
+    </a>
+  </span>
+  <h4>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures" target="_blank">
+      Typy danych
+    </a>
+  </h4>
+  <div class="types-grid">
+    <div class="type fragment fade-right" data-fragment-index="1">
+      <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined"
+        target="_blank">
+        undefined
+      </a>
+    </div>
+    <div class="type-example fragment fade-right" data-fragment-index="1">
+      <pre><code class="javascript hljs">
+          let value = undefined;
+          console.log(typeof value); // undefined
+        </code></pre>
+    </div>
+    <div class="type fragment fade-right" data-fragment-index="2">
+      <a href="https://developer.mozilla.org/pl/docs/Web/JavaScript/Referencje/Obiekty/Boolean" target="_blank">
+        boolean
+      </a>
+    </div>
+    <div class="type-example fragment fade-right" data-fragment-index="2">
+      <pre><code class="javascript hljs">
+          let value = true;
+          console.log(typeof value); // boolean
+        </code></pre>
+    </div>
+    <div class="type fragment fade-right" data-fragment-index="3">
+      <a href="https://developer.mozilla.org/pl/docs/Web/JavaScript/Referencje/Obiekty/Number" target="_blank">
+        number
+      </a>
+    </div>
+    <div class="type-example fragment fade-right" data-fragment-index="3">
+      <pre><code class="javascript hljs">
+          let value = 1;
+          console.log(typeof value); // number
+        </code></pre>
+    </div>
+    <div class="type fragment fade-right" data-fragment-index="4">
+      <a href="https://developer.mozilla.org/pl/docs/Web/JavaScript/Referencje/Obiekty/String" target="_blank">
+        string
+      </a>
+    </div>
+    <div class="type-example fragment fade-right" data-fragment-index="4">
+      <pre><code class="javascript hljs">          
+          let value = "Elo";
+          console.log(typeof value); // string
+        </code></pre>
+    </div>
+    <div class="type fragment fade-right" data-fragment-index="5">
+      <a href="https://developer.mozilla.org/pl/docs/Web/JavaScript/Referencje/Obiekty/Object" target="_blank">
+        object
+      </a>
+    </div>
+    <div class="type-example fragment fade-right" data-fragment-index="5">
+      <pre><code class="javascript hljs">
+          let value = {};
+          console.log(typeof value); // object
+        </code></pre>
+    </div>
+    <div class="type fragment fade-right" data-fragment-index="6">
+      <a href="https://developer.mozilla.org/pl/docs/Web/JavaScript/Referencje/Obiekty/null" target="_blank">
+        null
+      </a>
+    </div>
+    <div class="type-example fragment fade-right" data-fragment-index="6">
+      <pre><code class="javascript hljs" data-noescape>          
+          let value = null;
+          console.log(typeof value); // <span class="fragment fade-out  display-none" data-fragment-index="7">???</span><span class="fragment fade-in" data-fragment-index="7">object</span>
+        </code></pre>
+    </div>
+    <div class="type fragment fade-right" data-fragment-index="8">
+      <a href="https://developer.mozilla.org/pl/docs/Web/JavaScript/Referencje/Obiekty/Symbol" target="_blank">
+        symbol
+      </a>
+    </div>
+    <div class="type-example fragment fade-right" data-fragment-index="8">
+      <pre><code class="javascript hljs">
+          let value = Symbol();
+          console.log(typeof value); // symbol
+        </code></pre>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,65 @@
+<section id="arrys">
+    <span class="go-to-github-example">
+        <a href="https://github.com/Obryko/js-jsk-examples/blob/master/1-variablesAndScope/arrys.js" target="_blank">
+            <img class="example-image" src="https://static.thenounproject.com/png/2075975-200.png">
+        </a>
+    </span>
+    <h4>Operacje na tablicach</h4>
+    <p>Obiekt typu Array posiada w swoim prototypie wiele metod przydatych do wykonywnia opreacji na danych.</p>
+    <p>Każda taka funkcja w domyśle przyjmuje, wspomniany już callback, który może posiadać do trzech argumentów:</p>
+    <ol>
+        <li>Aktualnie przetwarzana wartość</li>
+        <li>Index na któym znajduje się wartość</li>
+        <li>Tablica na której wykonywana jest operacja</li>
+    </ol>
+</section>
+<section>
+    <h4>Podstawowe funckje na tablicach</h4>
+    <pre class="fragment fade-in small-pre margined" data-fragment-index="1"><code class="javascript hljs" data-noescape>        
+        const data = [1,2,3,4];
+        data.forEach((val,index) => consol.log(`Value ${val}, is on index ${index}));
+        </code></pre>
+    <pre class="fragment fade-in small-pre margined" data-fragment-index="2"><code class="javascript hljs" data-noescape>
+        const data = [1,2,3,4];
+        data.map((val,index) => val * index); <span class="fragment fade-out display-none" data-fragment-index="3">// ???</span><span class="fragment fade-in" data-fragment-index="3">// [0, 2, 6, 12]</span>
+    </code></pre>
+    <pre class="fragment fade-in small-pre margined" data-fragment-index="4"><code class="javascript hljs" data-noescape>
+        const data = [{}, '', 15, null];
+        const callback = (val) => typeof val === "number" || typeof val === "undefined";
+        data.filter(callback); <span class="fragment fade-out display-none" data-fragment-index="5">// ???</span><span class="fragment fade-in" data-fragment-index="5">// [15]</span>
+    </code></pre>
+    <pre class="fragment fade-in small-pre margined" data-fragment-index="6"><code class="javascript hljs" data-noescape>
+        const data = ["Java", "JavaScript", "StarterKit", "Capgemini"];
+        data.find(val => val.length > 4); <span class="fragment fade-out display-none" data-fragment-index="7">// ???</span><span class="fragment fade-in" data-fragment-index="7">//  "JavaScript"</span>
+    </code></pre>
+</section>
+<section>
+    <h4>Array.prototype.reduce</h4>
+
+    <pre class="fragment fade-in small-pre margined" data-fragment-index="1"><code class="javascript hljs" data-noescape>
+        const data = [1,2,3,4];
+        data.reduce((acc, curr, index) => {
+            return acc+curr;
+        }, 0); <span class="fragment fade-out display-none" data-fragment-index="2">// ???</span><span class="fragment fade-in" data-fragment-index="2">//  10</span>
+    </code></pre>
+
+    <pre class="fragment fade-in small-pre margined" data-fragment-index="3"><code class="javascript hljs" data-noescape>
+        const data = [1,2,3,4,5,6];
+        data.reduce((acc, curr, index) => {
+            return curr % 2 ? [...acc, curr] : acc;
+        }, []); <span class="fragment fade-out display-none" data-fragment-index="4">// ???</span><span class="fragment fade-in" data-fragment-index="4">//  [1, 3, 5]</span>
+    </code></pre>
+</section>
+<section>
+    <h4>Destrukturyzacja tablic</h4>
+    <pre class="fragment fade-in small-pre margined" data-fragment-index="1"><code class="javascript hljs" data-noescape>
+        const data = [1,2,3]
+        const test = [4,5,6];
+        [...test, ...data] <span class="fragment fade-out display-none" data-fragment-index="2">// ???</span><span class="fragment fade-in" data-fragment-index="2">//  [4, 5, 6, 1, 2, 3]</span>
+    </code></pre>
+
+    <pre class="fragment fade-in small-pre margined" data-fragment-index="3"><code class="javascript hljs" data-noescape>
+        const position = [52, 35];
+        const [x, y] = position; <span class="fragment fade-out display-none" data-fragment-index="4">// ???</span><span class="fragment fade-in" data-fragment-index="4">//  x = 52; y = 35</span>
+    </code></pre>
+</section>

@@ -37,20 +37,12 @@ export const TRANSITION = {
 };
 
 export const reveal = ({
-  controls,
-  progress,
-  center,
-  hash,
-  transition,
-  dependencies
+  dependencies,
+  ...rest
 }) => {
   global.Reveal = Reveal;
   Reveal.initialize({
-    controls,
-    progress,
-    center,
-    hash,
-    transition,
+    ...rest,
     dependencies: parseDependencies(dependencies)
   });
 };
