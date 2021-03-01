@@ -1,297 +1,132 @@
-<!doctype html><html><head><meta charset="utf-8"><meta name="description" content="A framework for easily creating beautiful presentations using HTML"><meta name="author" content="Kacper Obrycki"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>JavaScript JavaStarterKit</title><link rel="stylesheet" href="src.3e65d921.css"></head><body> <div class="reveal"> <div class="slides"> <section id="title-page"> <hgroup> <h1>JavaScript</h1> <h2>Java Starter Kit</h2> </hgroup> <p> <small>Autor <a href="mailto:kacper.obrycki@capgemini.com">Kacper Obrycki</a></small> <small> # </small> <small>Luty 2020</small> </p> </section><section> <h4><a href="https://obryko.github.io/js-jsk-slides">https://obryko.github.io/js-jsk-slides</a></h4> </section> <section> <section id="agenda"> <h2>Agenda:</h2> <ol> <li class="fragment fade-right" data-fragment-index="1"> <a href="#/intro-intro" data-fragment-index="1" class="fragment highlight-current-red"> Czym jest JavaScript i czy jest nam potrzebny? </a> </li> <li class="fragment fade-right" data-fragment-index="2"> <a href="#/intro-js-basic" class="fragment highlight-current-red" data-fragment-index="2"> Podstawy JavaScript </a> </li> <li class="fragment fade-right" data-fragment-index="3"> <a href="#/intro-browser" class="fragment highlight-current-red" data-fragment-index="3"> Przeglądarka, a JavaScript </a> </li> <li class="fragment fade-right" data-fragment-index="4"> <a href="#/intro-testing" class="fragment highlight-current-red" data-fragment-index="4"> Testowanie </a> </li> <li class="fragment fade-right" data-fragment-index="5"> <a href="#/intro-project" class="fragment highlight-current-red" data-fragment-index="5"> Projekt i zaliczenie </a> </li> </ol> </section> <section id="agenda-js-base"> <div class="agenda-align"> <h3>Podstwy JavaScript</h3> <ul> <li class="fragment fade-right" data-fragment-index="1"> <a href="#/variables" data-fragment-index="1" class="fragment highlight-current-green"> Zmienne </a> </li> <li class="fragment fade-right" data-fragment-index="2"> <a href="#/functions" data-fragment-index="2" class="fragment highlight-current-green"> Funkcje </a> </li> <li class="fragment fade-right" data-fragment-index="3"> <a href="#/objects" data-fragment-index="3" class="fragment highlight-current-green"> Obiekty </a> </li> <li class="fragment fade-right" data-fragment-index="4"> <a href="#/conditions" data-fragment-index="4" class="fragment highlight-current-green"> Warunki logiczne </a> </li> <li class="fragment fade-right" data-fragment-index="6"> <a href="#/arrys" data-fragment-index="6" class="fragment highlight-current-green"> Operacje na tablicach </a> </li> <li class="fragment fade-right" data-fragment-index="7"> <a href="#/prototyps" data-fragment-index="7" class="fragment highlight-current-green"> Prototypy </a> </li> <li class="fragment fade-right" data-fragment-index="8"> <a href="#/clousers" data-fragment-index="8" class="fragment highlight-current-green"> Scope & Clousers & Hoisting </a> </li> </ul> </div> </section> <section id="agenda-browser"> <div class="agenda-align"> <h3>Przeglądarka, a JavaScript</h3> <ul> <li class="fragment fade-right" data-fragment-index="1"> <span data-fragment-index="1" class="fragment highlight-current-green"> Podłączenie JS do HTML </span> </li> <li class="fragment fade-right" data-fragment-index="2"> <span data-fragment-index="2" class="fragment highlight-current-green"> DOM </span> </li> <li class="fragment fade-right" data-fragment-index="3"> <span data-fragment-index="3" class="fragment highlight-current-green"> Operacje na obiekcie dokument </span> </li> </ul> </div> </section> <section id="agenda-testing"> <div class="agenda-align"> <h3>Testowanie</h3> <ul> <li class="fragment fade-right" data-fragment-index="1"> <span data-fragment-index="1" class="fragment highlight-current-green"> Freamwork JEST. </span> </li> <li class="fragment fade-right" data-fragment-index="2"> <span data-fragment-index="2" class="fragment highlight-current-green"> Gdzie umiejscowiść testy? </span> </li> <li class="fragment fade-right" data-fragment-index="3"> <span data-fragment-index="3" class="fragment highlight-current-green"> Jak wygląda test? </span> </li> <li class="fragment fade-right" data-fragment-index="4"> <span data-fragment-index="4" class="fragment highlight-current-green"> Mock na globalnych obiektach. </span> </li> </ul> </div> </section> <section id="agenda-project"> <div class="agenda-align"> <h3>Projekt i zaliczenie</h3> <ul> <li class="fragment fade-right" data-fragment-index="1"> <a href="#/project-configuration" data-fragment-index="1" class="fragment highlight-current-green"> Konfiguracja projektu </a> </li> <li class="fragment fade-right" data-fragment-index="2"> <a href="#/project-task" data-fragment-index="2" class="fragment highlight-current-green"> Zadanie projektowe </a> </li> </ul> </div> </section> </section> <section id="intro"> <section id="intro-intro"> <h2>Czym jest JavaScript i czy jest nam potrzebny?</h2> </section> <section> <h4>Gdzie spotkamy JS?</h4> </section> <section> <h4>REST endpoint w Node.js</h4> <pre class="fragment fade-right"><code class="javascript hljs">
-            import * as express from 'express';
-            const app = express()
-            const port = 3000
-            
-            app.get('/', (req, res) => res.send('Hello World!'))
-            
-            app.listen(port, () => console.log(`Example app listening on port ${port}!`))
-        </code></pre> </section>
-</section> <section id="js-basic"> <section id="intro-js-basic"> <h2>Podstawy JavaScript</h2>
-</section> <section id="variables"> <span class="go-to-github-example"> <a href="https://github.com/Obryko/js-jsk-examples/blob/master/1-variablesAndScope/variable.js" target="_blank"> <img class="example-image" src="https://static.thenounproject.com/png/2075975-200.png"> </a> </span> <h4>Zmienne</h4> <pre class="fragment fade-right">
-    <code class="javascript hljs">
-      var bad = [];
-      bad = "Test";
-      var bad = 5;
-    </code>
-  </pre> <pre class="fragment fade-right">
-    <code class="javascript hljs">
-      const foo = "";
-      foo = 5; // Error: Assign to constant variable;
-    </code>
-  </pre> <pre class="fragment fade-right">
-    <code class="javascript hljs">
-      let bar = 1;
-      bar = 5;
-      let bat = 4; // Error 
-    </code>
-  </pre>
-</section><section id="types"> <span class="go-to-github-example"> <a href="https://github.com/Obryko/js-jsk-examples/blob/master/1-variablesAndScope/types.js" target="_blank"> <img class="example-image" src="https://static.thenounproject.com/png/2075975-200.png"> </a> </span> <h4> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures" target="_blank"> Typy danych </a> </h4> <div class="types-grid"> <div class="type fragment fade-right" data-fragment-index="1"> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined" target="_blank"> undefined </a> </div> <div class="type-example fragment fade-right" data-fragment-index="1"> <pre><code class="javascript hljs">
-          let value = undefined;
-          console.log(typeof value); // undefined
-        </code></pre> </div> <div class="type fragment fade-right" data-fragment-index="2"> <a href="https://developer.mozilla.org/pl/docs/Web/JavaScript/Referencje/Obiekty/Boolean" target="_blank"> boolean </a> </div> <div class="type-example fragment fade-right" data-fragment-index="2"> <pre><code class="javascript hljs">
-          let value = true;
-          console.log(typeof value); // boolean
-        </code></pre> </div> <div class="type fragment fade-right" data-fragment-index="3"> <a href="https://developer.mozilla.org/pl/docs/Web/JavaScript/Referencje/Obiekty/Number" target="_blank"> number </a> </div> <div class="type-example fragment fade-right" data-fragment-index="3"> <pre><code class="javascript hljs">
-          let value = 1;
-          console.log(typeof value); // number
-        </code></pre> </div> <div class="type fragment fade-right" data-fragment-index="4"> <a href="https://developer.mozilla.org/pl/docs/Web/JavaScript/Referencje/Obiekty/String" target="_blank"> string </a> </div> <div class="type-example fragment fade-right" data-fragment-index="4"> <pre><code class="javascript hljs">          
-          let value = "Elo";
-          console.log(typeof value); // string
-        </code></pre> </div> <div class="type fragment fade-right" data-fragment-index="5"> <a href="https://developer.mozilla.org/pl/docs/Web/JavaScript/Referencje/Obiekty/Object" target="_blank"> object </a> </div> <div class="type-example fragment fade-right" data-fragment-index="5"> <pre><code class="javascript hljs">
-          let value = {};
-          console.log(typeof value); // object
-        </code></pre> </div> <div class="type fragment fade-right" data-fragment-index="6"> <a href="https://developer.mozilla.org/pl/docs/Web/JavaScript/Referencje/Obiekty/null" target="_blank"> null </a> </div> <div class="type-example fragment fade-right" data-fragment-index="6"> <pre><code class="javascript hljs" data-noescape="">          
-          let value = null;
-          console.log(typeof value); // <span class="fragment fade-out display-none" data-fragment-index="7">???</span><span class="fragment fade-in" data-fragment-index="7">object</span>
-        </code></pre> </div> <div class="type fragment fade-right" data-fragment-index="8"> <a href="https://developer.mozilla.org/pl/docs/Web/JavaScript/Referencje/Obiekty/Symbol" target="_blank"> symbol </a> </div> <div class="type-example fragment fade-right" data-fragment-index="8"> <pre><code class="javascript hljs">
-          let value = Symbol();
-          console.log(typeof value); // symbol
-        </code></pre> </div> </div>
-</section> <section id="functions"> <span class="go-to-github-example"> <a href="https://github.com/Obryko/js-jsk-examples/blob/master/js-basic/functions.js" target="_blank"> <img class="example-image" src="https://static.thenounproject.com/png/2075975-200.png"> </a> </span> <h4>Funkcje</h4> <pre class="fragment fade-right small-pre">
-        <code class="javascript hljs">
-          function foo(name) {
-            console.log(`Cześć ${name}!`);
-            return name.toUpperCase();
-          };
-        </code>
-      </pre> <pre class="fragment fade-right small-pre">
-        <code class="javascript hljs">
-          const foo = function(name) {
-            console.log(`Cześć ${name}!`);
-            return name.toUpperCase();
-          };
-        </code>
-      </pre> <pre class="fragment fade-right small-pre">
-        <code class="javascript hljs">
-          const foo = (name) => {
-            console.log(`Cześć ${name}!`);
-            return name.toUpperCase();
-          };
-        </code>
-      </pre> <pre class="fragment fade-right small-pre">
-        <code class="javascript hljs">
-          const foo = (name) => name.toUpperCase();
-        </code>
-      </pre>
-</section><section> <h4>Funckje również podlegają hoistingowi.</h4> <pre class="fragment fade-right small-pre" data-fragment-index="1">
-        <code class="javascript hljs" data-noescape="">
-            bar("Tomek"); // <span class="fragment fade-out display-none" data-fragment-index="2">???</span><span class="fragment fade-in" data-fragment-index="2">Cześć Tomek!</span>
-            function bar(name) {
-              return `Cześć ${name}!`;
-            }
-        </code>
-      </pre> <pre class="fragment fade-right small-pre" data-fragment-index="3">
-        <code class="javascript hljs" data-noescape="">
-            bar("Tomek"); <span class="fragment fade-out display-none" data-fragment-index="4">// ???</span><span class="fragment fade-in error" data-fragment-index="4">// Cannot access 'bar' before initialization</span>
-            const bar = function(name) {
-              return `Cześć ${name}!`;
-            };
-        </code>
-      </pre> <pre class="fragment fade-right small-pre" data-fragment-index="5">
-        <code class="javascript hljs" data-noescape="">
-            bar("Tomek"); <span class="fragment fade-out display-none" data-fragment-index="6">// ???</span><span class="fragment fade-in error" data-fragment-index="6">// Cannot access 'bar' before initialization</span>
-            const bar = name => {
-              return `Cześć ${name}!`;
-            };
-        </code>
-      </pre> <pre class="fragment fade-right small-pre" data-fragment-index="7">
-        <code class="javascript hljs" data-noescape="">
-            bar("Tomek"); <span class="fragment fade-out display-none" data-fragment-index="8">// ???</span><span class="fragment fade-in error" data-fragment-index="8">// Cannot access 'bar' before initialization</span>
-            const bar = name => `Cześć ${name}!`;
-        </code>
-      </pre>
-</section> <section id="conditions"> <h4>Warunki logiczne</h4> <pre class="fragment fade-in margined" data-fragment-index="1"><code class="javascript hljs" data-noescape="">
-        const condition = true;
-        if(condition) {
-            console.log(true);
-        } else {
-            console.log(false);
-        }
-    </code></pre> <pre class="fragment fade-in margined" data-fragment-index="2"><code class="javascript hljs" data-noescape="">
-        //Inline if
-        const value = true ? 5 : 2;
-    </code></pre>
-</section><section> <h4>Operatory logiczne</h4> <div class="types-grid"> <div class="type fragment fade-right" data-fragment-index="1"> AND </div> <div class="type-example fragment fade-right" data-fragment-index="1"> <pre><code class="javascript hljs" data-noescape="">
-              const value = true && true ? 5 : 1; <span class="fragment fade-out display-none" data-fragment-index="2">// ???</span><span class="fragment fade-in" data-fragment-index="2">// 5</span>
-              const val = true && "Test"; <span class="fragment fade-out display-none" data-fragment-index="3">// ???</span><span class="fragment fade-in" data-fragment-index="3">// "Test"</span>
-            </code></pre> </div> <div class="type fragment fade-right" data-fragment-index="4"> OR </div> <div class="type-example fragment fade-right" data-fragment-index="4"> <pre><code class="javascript hljs" data-noescape="">
-            const value = false || false ? 5 : 1; <span class="fragment fade-out display-none" data-fragment-index="5">// ???</span><span class="fragment fade-in" data-fragment-index="5">// 1</span>
-            const val = true || "Test"; <span class="fragment fade-out display-none" data-fragment-index="6">// ???</span><span class="fragment fade-in" data-fragment-index="6">// true</span>
-          </code></pre> </div> <div class="type fragment fade-right" data-fragment-index="7"> ! </div> <div class="type-example fragment fade-right" data-fragment-index="7"> <pre><code class="javascript hljs" data-noescape="">
-            const value = !(false || false) ? 5 : 1; <span class="fragment fade-out display-none" data-fragment-index="8">// ???</span><span class="fragment fade-in" data-fragment-index="8">// 5</span>
-            </code></pre> </div> <div class="type fragment fade-right" data-fragment-index="9"> !! </div> <div class="type-example fragment fade-right" data-fragment-index="9"> <pre><code class="javascript hljs" data-noescape="">          
-              let value = !!"Elo";<span class="fragment fade-out display-none" data-fragment-index="10">// ???</span><span class="fragment fade-in" data-fragment-index="10">// true</span>
-              let val = "JavaScript" > "Kotlin";<span class="fragment fade-out display-none" data-fragment-index="11">// ???</span><span class="fragment fade-in" data-fragment-index="11">// false</span>
-            </code></pre> </div> <div class="type fragment fade-right" data-fragment-index="12"> < lub> </div> <div class="type-example fragment fade-right" data-fragment-index="12"> <pre><code class="javascript hljs" data-noescape="">          
-              let value = 5 > 1;<span class="fragment fade-out display-none" data-fragment-index="13">// ???</span><span class="fragment fade-in" data-fragment-index="13">// true</span>
-              let val = !!"";<span class="fragment fade-out display-none" data-fragment-index="14">// ???</span><span class="fragment fade-in" data-fragment-index="14">// false</span>
-            </code></pre> </div> </div>
-</section><section id="falsy"> <h4>Falsy values</h4> <ol> <li class="fragment fade-right">0</li> <li class="fragment fade-right">null</li> <li class="fragment fade-right">undefined</li> <li class="fragment fade-right">false</li> <li class="fragment fade-right">NaN</li> <li class="fragment fade-right">""</li> </ol>
-</section><section id="falsy"> <h4>== vs ===</h4> </section> <section id="objects"> <span class="go-to-github-example"> <a href="https://github.com/Obryko/js-jsk-examples/blob/master/1-variablesAndScope/objects.js" target="_blank"> <img class="example-image" src="https://static.thenounproject.com/png/2075975-200.png"> </a> </span> <h4>Obiekty</h4> <p class="fragment fade-right">W JavaScript <u>prawie</u> wszystko jest obiektem!</p> <pre class="fragment fade-right"><code class="javascript hljs">
-        function show() {
-            console.log(this.brand + " koloru " + this.color);
-        }
-        
-        const car1 = {
-            brand : "Mercedes",
-            color : "czerwony",
-            showText : show
-        }
-        
-        const car2 = {
-            brand : "BMW",
-            color : "czarny",
-            showText : show
-        }
-        
-        car1.showText(); //"Mercedes koloru czerwony"
-        car2.showText(); //"BMW koloru czarny"
-    </code></pre>
-</section><section> <h4>Dostęp do pól obiektów.</h4> <pre class="fragment fade-right" data-fragment-index="0"><code class="javascript hljs" data-noescape="">
-        const car = {
-            brand : "Mercedes",
-            color : "czerwony",
-            showText : show
-        }
-        <div class="fragment fade-in align-div" data-fragment-index="1">
-            // Sprawdzanie po polu
-            <span>car.brand; // "Mercedes"</span>
-        </div>
-        <div class="fragment fade-in align-div" data-fragment-index="2">
-            // Dodawanie pola
-            <span>car.year = 2002;</span>   
-        </div>     
-        <div class="fragment fade-in align-div" data-fragment-index="3">
-            // Pobieranie pola po nazwie w string
-            <span>car['year']; // 2002</span>
-        </div>
-    </code></pre>
-</section><section> <h4>Iteracja po obiekcie</h4> <pre class="fragment fade-right" data-fragment-index="0"><code class="javascript hljs" data-noescape="">
-        const car = {
-            brand : "Mercedes",
-            color : "czerwony",
-            showText : show
-        }
-    </code></pre> <pre class="fragment fade-right" data-fragment-index="1"><code class="javascript hljs" data-noescape="">
-        for(const key in car) {
-            console.log(key); <span class="fragment fade-out display-none" data-fragment-index="2">// ???</span><span class="fragment fade-in" data-fragment-index="2">// brand kolor showText</span>
-        }
-        Object.keys(car); <span class="fragment fade-out display-none" data-fragment-index="3">// ???</span><span class="fragment fade-in" data-fragment-index="3">// ['brand', 'kolor','showText']</span>
-    </code></pre> <pre class="fragment fade-right" data-fragment-index="4"><code class="javascript hljs" data-noescape="">
-        for(const key in car) {
-            console.log(car[key]); <span class="fragment fade-out display-none" data-fragment-index="5">// ???</span><span class="fragment fade-in" data-fragment-index="5">// ['Mercedes', 'czerwony', f]</span>
-        }
-        Object.values(car); <span class="fragment fade-out display-none" data-fragment-index="6">// ???</span><span class="fragment fade-in" data-fragment-index="6">// ['Mercedes', 'czerwony', f]</span>
-    </code></pre>
-</section><section> <h4>Destrukturyzacja obiektów</h4> <p>Destrukturyzacja pozawala rozłozyć obiekt na pojedyncze pola.</p> <pre class="fragment fade-right" style="width:110%;" data-fragment-index="1"><code class="javascript hljs" data-noescape="">
-        const car = {
-            brand : "Mercedes",
-            color : "czerwony"
-        }
-        <span class="fragment fade-in" data-fragment-index="2">const { brand, color } = car;</span>
-    </code></pre> <pre class="fragment fade-right" style="width:110%;" data-fragment-index="3"><code class="javascript hljs" data-noescape="">
-        const engine = {
-            capacity : 2,
-            fuel : "disel"
-        }
-        <span class="fragment fade-in" data-fragment-index="4">const carWithEngine = {...car, ...engine};</span>
-        <span class="fragment fade-in" data-fragment-index="5">console.log(carWithEngine); // { brand: "Mercedes", color: "czerwony", capacity: 2, fuel: "disel"};</span>
-    </code></pre>
-</section> <section id="prototyps"> <span class="go-to-github-example"> <a href="https://github.com/Obryko/js-jsk-examples/blob/master/1-variablesAndScope/prototyps.js" target="_blank"> <img class="example-image" src="https://static.thenounproject.com/png/2075975-200.png"> </a> </span> <h4>Prototypy</h4> <p>Każda funckja w JavaScript posiada swój prototyp.</p> <p>Prototyp jest to obiekt definiujący funkcje należące do konkretnego typu obiektu - podobnie jak w przypadku klas w innych językach programowania.</p> <h5>Ale w przypadku prototypów nalepiej przejść od razu do przykładów.</h5>
-</section> <section id="arrys"> <span class="go-to-github-example"> <a href="https://github.com/Obryko/js-jsk-examples/blob/master/1-variablesAndScope/arrys.js" target="_blank"> <img class="example-image" src="https://static.thenounproject.com/png/2075975-200.png"> </a> </span> <h4>Operacje na tablicach</h4> <p>Obiekt typu Array posiada w swoim prototypie wiele metod przydatych do wykonywnia opreacji na danych.</p> <p>Każda taka funkcja w domyśle przyjmuje, wspomniany już callback, który może posiadać do trzech argumentów:</p> <ol> <li>Aktualnie przetwarzana wartość</li> <li>Index na któym znajduje się wartość</li> <li>Tablica na której wykonywana jest operacja</li> </ol>
-</section><section> <h4>Podstawowe funckje na tablicach</h4> <pre class="fragment fade-in small-pre margined" data-fragment-index="1"><code class="javascript hljs" data-noescape="">        
-        const data = [1,2,3,4];
-        data.forEach((val,index) => consol.log(`Value ${val}, is on index ${index}));
-        </code></pre> <pre class="fragment fade-in small-pre margined" data-fragment-index="2"><code class="javascript hljs" data-noescape="">
-        const data = [1,2,3,4];
-        data.map((val,index) => val * index); <span class="fragment fade-out display-none" data-fragment-index="3">// ???</span><span class="fragment fade-in" data-fragment-index="3">// [0, 2, 6, 12]</span>
-    </code></pre> <pre class="fragment fade-in small-pre margined" data-fragment-index="4"><code class="javascript hljs" data-noescape="">
-        const data = [{}, '', 15, null];
-        const callback = (val) => typeof val === "number" || typeof val === "undefined";
-        data.filter(callback); <span class="fragment fade-out display-none" data-fragment-index="5">// ???</span><span class="fragment fade-in" data-fragment-index="5">// [15]</span>
-    </code></pre> <pre class="fragment fade-in small-pre margined" data-fragment-index="6"><code class="javascript hljs" data-noescape="">
-        const data = ["Java", "JavaScript", "StarterKit", "Capgemini"];
-        data.find(val => val.length > 4); <span class="fragment fade-out display-none" data-fragment-index="7">// ???</span><span class="fragment fade-in" data-fragment-index="7">//  "JavaScript"</span>
-    </code></pre>
-</section><section> <h4>Array.prototype.reduce</h4> <pre class="fragment fade-in small-pre margined" data-fragment-index="1"><code class="javascript hljs" data-noescape="">
-        const data = [1,2,3,4];
-        data.reduce((acc, curr, index) => {
-            return acc+curr;
-        }, 0); <span class="fragment fade-out display-none" data-fragment-index="2">// ???</span><span class="fragment fade-in" data-fragment-index="2">//  10</span>
-    </code></pre> <pre class="fragment fade-in small-pre margined" data-fragment-index="3"><code class="javascript hljs" data-noescape="">
-        const data = [1,2,3,4,5,6];
-        data.reduce((acc, curr, index) => {
-            return curr % 2 ? [...acc, curr] : acc;
-        }, []); <span class="fragment fade-out display-none" data-fragment-index="4">// ???</span><span class="fragment fade-in" data-fragment-index="4">//  [1, 3, 5]</span>
-    </code></pre>
-</section><section> <h4>Destrukturyzacja tablic</h4> <pre class="fragment fade-in small-pre margined" data-fragment-index="1"><code class="javascript hljs" data-noescape="">
-        const data = [1,2,3]
-        const test = [4,5,6];
-        [...test, ...data] <span class="fragment fade-out display-none" data-fragment-index="2">// ???</span><span class="fragment fade-in" data-fragment-index="2">//  [4, 5, 6, 1, 2, 3]</span>
-    </code></pre> <pre class="fragment fade-in small-pre margined" data-fragment-index="3"><code class="javascript hljs" data-noescape="">
-        const position = [52, 35];
-        const [x, y] = position; <span class="fragment fade-out display-none" data-fragment-index="4">// ???</span><span class="fragment fade-in" data-fragment-index="4">//  x = 52; y = 35</span>
-    </code></pre>
-</section>
-</section> <section id="browser"> <section id="intro-brwoser"> <h2>Przeglądarka, a JavaScript</h2> </section> <section> <span class="go-to-github-example"> <a href="https://github.com/Obryko/js-jsk-examples/blob/master/1-variablesAndScope/arrys.js" target="_blank"> <img class="example-image" src="https://static.thenounproject.com/png/2075975-200.png"> </a> </span> <h4>Podłączenie JS do HTML</h4> <p>Na końcu tag-u body w html dodajemy script tag:</p> <pre class="fragment fade-right"><code class="hljs-tag hljs">          
-            &lt;script src="path"&gt;&lt;/script&gt;
-        </code></pre> <p class="fragment fade-right">,gdzie path to ścieżka do naszego pliku JavaScript</p> </section> <section> <p><a href="https://developer.mozilla.org/pl/docs/Dokumentacja_Gecko_DOM/Wprowadzenie">DOM</a> - (ang. Document Objecty Model) stanowi API dla dokumentów HTML i XML. Odpowiada za dwie rzeczy: zapewnia reprezentację struktury dokumentu oraz określa, w jaki sposób odnosić się do tej struktury z poziomu skryptu. </p> </section> <section> <h4>Obiekt <a href="https://developer.mozilla.org/pl/docs/Web/API/Document">DOCUMENT</a></h4> <ul class="code-ul"> <li class="fragment fade-right"> <pre class="small-pre"><code class="javascript hljs">
-                    docuemnt.getElementById('id');
-                </code></pre> </li> <li class="fragment fade-right"> <pre class="small-pre"><code class="javascript hljs">
-                    docuemnt.getElementsByClassName("className");
-                </code></pre> </li> <li class="fragment fade-right"> <pre class="small-pre"><code class="javascript hljs">
-                    docuemnt.getElementsByTagName("tag");
-                </code></pre> </li> <li class="fragment fade-right"> <pre class="small-pre"><code class="javascript hljs">
-                    document.createElement('tag');
-                </code></pre> </li> <li class="fragment fade-right"> <pre class="small-pre"><code class="javascript hljs">
-                    document.createTextNode('Some text');
-                </code></pre> </li> </ul> </section>
-</section> <section id="testing"> <section id="intro-testing"> <h2>Testowanie</h2> </section> <section> <h4>Biblioteka <a href="https://jestjs.io/">JEST</a></h4> <p>JEST to bezkonfiguracyjny freamwork do testowania kodu napisanego w technologiach opartych o JavaScript.</p> <img src="https://www.lambdatest.com/blog/wp-content/uploads/2019/01/image7-5.png" alt=""> </section> <section> <h4>Gdzie umieszczamy testy?</h4> <ul> <li>Obok pliku testowanego. Plik z testami jest tej samej nazwy co plik testowany lecz z rozszerzeniem .test.js</li> <li>W folderze katalogu __TESTS__</li> <li>W osobnym folderze z testami (obok folderu src - jak w Java)</li> </ul> </section> <section> <h4> Z czego składa się plik testami? </h4> <pre class="fragment fade-right"><code class="javascript hljs" data-trim="" data-line-numbers="1,15|2,10|12|3-9|14">
-            describe('Opis głowny przypadków testowych', () => {
-                it('pojedynczy test', () => {
-                    //given
-                    const a = 5;
-                    const b = 6;
-                    //when
-                    const value = add(a,b);
-                    //then
-                    expect(value).toEqual(11);
-                });
-
-                test('Inny test', () => {...});
-
-                describe('Podblok z testami', () => {...})
-            });
-        </code></pre> </section> <section> <h4>Mockowanie obiektu document i window oraz funkcji</h4> <pre class="fragment fade-right"><code class="javascript hljs">
-            describe('', () => {
-                it('test', () => {
-                    //given
-                    globalThis.document = {
-                        getElementById = jest.fn()
-                    }
-
-                    ...
-                    //then
-                    expect(global.document.getElementById).toHaveBeenCalled();
-                })
-            });
-        </code></pre> </section>
-</section> <section id="project"> <section id="intro-project"> <h2>Projekt i zaliczenie</h2> </section> <section id="project-configuration"> <h4>Konfiguracja projektu</h4> <ol> <li><span>Pobieramy i instalujemy <a href="https://nodejs.org/en/">Node.js</a> ze strony głównej lub za pomoca <a href="https://github.com/coreybutler/nvm-windows">NVM</a></span></li> <li><span>Pobieramy template projektu z <a href="https://github.com/Obryko/js-jsk-template">repo</a>, jako zip.</span></li> <li><span>Wypakowujemy w miejscu projektu i wpisujemy w konsoli <code class="bash hljs custom-bash">npm install</code>.</span></li> <li><span>W celu startu aplikacji developerskiej wpisujemy w konsoli <code class="bash hljs custom-bash">npm start</code></span></li> <li><span>W celu zbudowania aplikacji produkcyjnej wpisujemy w konsoli <code class="bash hljs custom-bash">npm run build</code></span></li> </ol> </section> <section> <h4>Jak skomunikować ze sobą pliki?</h4> <pre class="fragment fade-right"><code class="javascript hljs">
-            export const getName = () => {};
-            export const YEAR = "2020"
-            const init = () => {};
-            export defult init;
-        </code></pre> <pre class="fragment fade-right"><code class="javascript hljs">
-            import { getName } from "file";
-            improt { YEAR } from "other";
-
-            import { getName, YEAR } from "file";
-            
-            import init from "file";
-
-            import init, { getName, YEAR } from "file";
-        </code></pre> </section>
-</section> <section id="summary"> <section id="intro-summary"> <h2>Podsumowanie</h2> </section> <section id="links"> <div class="agenda-align"> <h4>Przydatne link:</h4> <ul> <li><a href="https://developer.mozilla.org/pl/docs/Web">MDN</a></li> <li><a href="https://www.youtube.com/channel/UC_MIaHmSkt9JHNZfQ_gUmrg">Overment - YT</a></li> <li><a href="https://www.youtube.com/channel/UCq8XmOMtrUCb8FcFHQEd8_g">Hello Roman - YT</a></li> <li><a href="https://flexboxfroggy.com/#pl">Flexbox CSS</a></li> <li><a href="https://cssgridgarden.com/#pl">GRID CSS</a></li> </ul> </div> </section>
-</section><section id="end"> <h3>Dziękuję za uwagę 😃</h3> <h4>I powodzenia!</h4>
-</section> </div> </div> <script src="src.197e916e.js"></script> </body></html>
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="description" content="A framework for easily creating beautiful presentations using HTML"><meta name="author" content="Kacper Obrycki"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>JavaScript JavaStarterKit</title><link rel="stylesheet" href="./index.css"></head><body><div class="reveal"><div class="slides"><section id="title-page"><hgroup><h1>JavaScript</h1><h2>Java Starter Kit</h2></hgroup><p><small>Autor <a href="mailto:kacper.obrycki@capgemini.com">Kacper Obrycki</a></small><small class="hash-margin"> # </small><small>Marzec 2021</small></p></section><section><h4><a href="https://obryko.github.io/js-jsk-slides">https://obryko.github.io/js-jsk-slides</a></h4></section><section><section id="agenda"><h2>Agenda:</h2><ol><li class="fragment fade-right" data-fragment-index="1"><a class="fragment" href="#/intro-intro" data-fragment-index="1">Czym jest JavaScript i czy jest nam potrzebny?</a></li><li class="fragment fade-right" data-fragment-index="2"><a class="fragment" href="#/intro-js-basic" data-fragment-index="2">Podstawy JavaScript</a></li><li class="fragment fade-right" data-fragment-index="3"><a class="fragment" href="#/intro-browser" data-fragment-index="3">Przeglądarka, a JavaScript</a></li><li class="fragment fade-right" data-fragment-index="4"><a class="fragment" href="#/intro-testing" data-fragment-index="4">Testowanie</a></li><li class="fragment fade-right" data-fragment-index="5"><a class="fragment" href="#/intro-project" data-fragment-index="5">Projekt i zaliczenie</a></li></ol></section><section id="agenda-js-base"><div class="agenda-align"><h3>Podstwy JavaScript</h3><ul></ul><li class="fragment fade-right" data-fragment-index="1"><a class="fragment highlight-current-green" href="#/variables" data-fragment-index="1"></a>Zmienne</li><li class="fragment fade-right" data-fragment-index="2"><a class="fragment highlight-current-green" href="#/functions" data-fragment-index="2"></a>Funkcje</li><li class="fragment fade-right" data-fragment-index="3"><a class="fragment highlight-current-green" href="#/objects" data-fragment-index="3"></a>Obiekty</li><li class="fragment fade-right" data-fragment-index="4"><a class="fragment highlight-current-green" href="#/conditions" data-fragment-index="4"></a>Warunki logiczne</li><li class="fragment fade-right" data-fragment-index="6"><a class="fragment highlight-current-green" href="#/arrys" data-fragment-index="6"></a>Operacje na tablicach</li><li class="fragment fade-right" data-fragment-index="7"><a class="fragment highlight-current-green" href="#/prototyps" data-fragment-index="7"></a>Prototypy</li><li class="fragment fade-right" data-fragment-index="8"><a class="fragment highlight-current-green" href="#/clousers" data-fragment-index="8"></a>Scope & Clousers & Hoisting</li></div></section><section id="agenda-browser"><div class="agenda-align"><h3>Przeglądarka, a JavaScript</h3><ul></ul><li class="fragment fade-right" data-fragment-index="1"><span class="fragment highlight-current-green" data-fragment-index="1"></span>Podłączenie JS do HTML</li><li class="fragment fade-right" data-fragment-index="2"><span class="fragment highlight-current-green" data-fragment-index="2"></span>DOM</li><li class="fragment fade-right" data-fragment-index="3"><span class="fragment highlight-current-green" data-fragment-index="3"></span>Operacje na obiekcie dokument</li></div></section><section id="agenda-testing"><div class="agenda-align"><h3>Testowanie</h3><ul></ul><li class="fragment fade-right" data-fragment-index="1"><span class="fragment highlight-current-green" data-fragment-index="1"></span>Freamwork JEST.</li><li class="fragment fade-right" data-fragment-index="2"><span class="fragment highlight-current-green" data-fragment-index="2"></span>Gdzie umiejscowiść testy?</li><li class="fragment fade-right" data-fragment-index="3"><span class="fragment highlight-current-green" data-fragment-index="3"></span>Jak wygląda test?</li><li class="fragment fade-right" data-fragment-index="4"><span class="fragment highlight-current-green" data-fragment-index="4"></span>Mock na globalnych obiektach.</li></div></section><section id="agenda-project"><div class="agenda-align"><h3>Projekt i zaliczenie</h3><ul></ul><li class="fragment fade-right" data-fragment-index="1"><a class="fragment highlight-current-green" href="#/project-configuration" data-fragment-index="1"></a>Konfiguracja projektu</li><li class="fragment fade-right" data-fragment-index="2"><a class="fragment highlight-current-green" href="#/project-task" data-fragment-index="2"></a>Zadanie projektowe</li></div></section></section><section id="intro"><section id="intro-intro"><h2>Czym jest JavaScript i czy jest nam potrzebny?</h2></section><section><h4>Gdzie spotkamy JS?</h4></section><section><h4>REST endpoint w Node.js</h4><pre class="fragment fade-right"><code class="javascript hljs">import * as express from 'express';
+const app = express()
+const port = 3000
+ 
+app.get('/', (req, res) => res.send('Hello World!'))
+ 
+app.listen(port, () => console.log(`Example app listening on port ${port}!`))</code></pre></section></section><section id="js-basic"><section id="intro-js-basic"><h2>Podstawy JavaScript</h2></section><section id="variables"><span class="go-to-github-example"><a href="https://github.com/Obryko/js-jsk-examples/blob/master/1-variablesAndScope/variable.js" target="_blank"><img class="example-image" src="https://static.thenounproject.com/png/2075975-200.png"></a></span><h4>Zmienne</h4><pre class="fragment fade-right"><code class="javascript hljs">var bad = [];
+bad = "Test";
+var bad = 5;</code></pre><pre class="fragment fade-right"><code class="javascript hljs">const foo = "";
+foo = 5; // Error: Assign to constant variable;</code></pre><pre class="fragment fade-right"><code class="javascript hljs">let bar = 1;
+bar = 5;
+let bat = 4; // Error</code></pre></section><section id="types"><span class="go-to-github-example"><a href="https://github.com/Obryko/js-jsk-examples/blob/master/1-variablesAndScope/types.js" target="_blank"><img class="example-image" src="https://static.thenounproject.com/png/2075975-200.png"></a></span><h4><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures" target="_blank">Typy danych</a></h4><div class="types-grid"><div class="type fragment fade-right" data-fragment-index="1"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined" target="_blank">undefined</a></div><div class="type-example fragment fade-right" data-fragment-index="1"><pre><code class="javascript hljs">let value = undefined;
+console.log(typeof value); // undefined</code></pre></div><div class="type fragment fade-right" data-fragment-index="2"><a href="https://developer.mozilla.org/pl/docs/Web/JavaScript/Referencje/Obiekty/Boolean" target="_blank">boolean</a></div><div class="type-example fragment fade-right" data-fragment-index="2"><pre><code class="javascript hljs">let value = true;
+console.log(typeof value); // boolean</code></pre></div><div class="type fragment fade-right" data-fragment-index="3"><a href="https://developer.mozilla.org/pl/docs/Web/JavaScript/Referencje/Obiekty/Number" target="_blank">number</a></div><div class="type-example fragment fade-right" data-fragment-index="3"><pre><code class="javascript hljs">let value = 1;
+console.log(typeof value); // number</code></pre></div><div class="type fragment fade-right" data-fragment-index="4"><a href="https://developer.mozilla.org/pl/docs/Web/JavaScript/Referencje/Obiekty/String" target="_blank">string</a></div><div class="type-example fragment fade-right" data-fragment-index="4"><pre><code class="javascript hljs"> 
+let value = "Elo";
+console.log(typeof value); // string</code></pre></div><div class="type fragment fade-right" data-fragment-index="5"><a href="https://developer.mozilla.org/pl/docs/Web/JavaScript/Referencje/Obiekty/Object" target="_blank">object</a></div><div class="type-example fragment fade-right" data-fragment-index="5"><pre><code class="javascript hljs">let value = {};
+console.log(typeof value); // object</code></pre></div><div class="type fragment fade-right" data-fragment-index="6"><a href="https://developer.mozilla.org/pl/docs/Web/JavaScript/Referencje/Obiekty/null" target="_blank">null</a></div><div class="type-example fragment fade-right" data-fragment-index="6"><pre><code class="javascript hljs" data-noescape> 
+let value = null;
+console.log(typeof value); //<span class="fragment fade-out display-none" data-fragment-index="7">???</span><span class="fragment fade-in" data-fragment-index="7">object</span></code></pre></div><div class="type fragment fade-right" data-fragment-index="8"><a href="https://developer.mozilla.org/pl/docs/Web/JavaScript/Referencje/Obiekty/Symbol" target="_blank">symbol</a></div><div class="type-example fragment fade-right" data-fragment-index="8"><pre><code class="javascript hljs">let value = Symbol();
+console.log(typeof value); // symbol</code></pre></div></div></section><section id="functions"><span class="go-to-github-example"><a href="https://github.com/Obryko/js-jsk-examples/blob/master/js-basic/functions.js" target="_blank"><img class="example-image" src="https://static.thenounproject.com/png/2075975-200.png"></a></span><h4>Funkcje</h4><pre class="fragment fade-right small-pre"><code class="javascript hljs">function foo(name) {
+	console.log(`Cześć ${name}!`);
+	return name.toUpperCase();
+};</code></pre><pre class="fragment fade-right small-pre"><code class="javascript hljs">const foo = function(name) {
+	console.log(`Cześć ${name}!`);
+	return name.toUpperCase();
+};</code></pre><pre class="fragment fade-right small-pre"><code class="javascript hljs">const foo = (name) => {
+	console.log(`Cześć ${name}!`);
+	return name.toUpperCase();
+};</code></pre><pre class="fragment fade-right small-pre"><code class="javascript hljs">const foo = (name) => name.toUpperCase();</code></pre></section><section><h4>Funckje również podlegają hoistingowi.</h4><pre class="fragment fade-right small-pre" data-fragment-index="1"><code class="javascript hljs" data-noescape>bar("Tomek"); //<span class="fragment fade-out display-none" data-fragment-index="2">???</span><span class="fragment fade-in" data-fragment-index="2">Cześć Tomek!</span>function bar(name) {
+	return `Cześć ${name}!`;
+}</code></pre><pre class="fragment fade-right small-pre" data-fragment-index="3"><code class="javascript hljs" data-noescape>bar("Tomek");<span class="fragment fade-out display-none" data-fragment-index="4">// ???</span><span class="fragment fade-in error" data-fragment-index="4">// Cannot access 'bar' before initialization</span>const bar = function(name) {
+	return `Cześć ${name}!`;
+};</code></pre><pre class="fragment fade-right small-pre" data-fragment-index="5"><code class="javascript hljs" data-noescape>bar("Tomek");<span class="fragment fade-out display-none" data-fragment-index="6">// ???</span><span class="fragment fade-in error" data-fragment-index="6">// Cannot access 'bar' before initialization</span>const bar = name => {
+	return `Cześć ${name}!`;
+};</code></pre><pre class="fragment fade-right small-pre" data-fragment-index="7"><code class="javascript hljs" data-noescape>bar("Tomek");<span class="fragment fade-out display-none" data-fragment-index="8">// ???</span><span class="fragment fade-in error" data-fragment-index="8">// Cannot access 'bar' before initialization</span>const bar = name => `Cześć ${name}!`;</code></pre></section><section id="conditions"><h4>Warunki logiczne</h4><pre class="fragment fade-in margined" data-fragment-index="1"><code class="javascript hljs" data-noescape>const condition = true;
+if(condition) {
+console.log(true);
+} else {
+console.log(false);
+}</code></pre><pre class="fragment fade-in margined" data-fragment-index="2"><code class="javascript hljs" data-noescape>//Inline if
+const value = true ? 5 : 2;</code></pre></section><section><h4>Operatory logiczne</h4><div class="types-grid"><div class="type fragment fade-right" data-fragment-index="1">AND</div><div class="type-example fragment fade-right" data-fragment-index="1"><pre><code class="javascript hljs" data-noescape>const value = true && true ? 5 : 1;<span class="fragment fade-out display-none" data-fragment-index="2">// ???</span><span class="fragment fade-in" data-fragment-index="2">// 5</span>const val = true && "Test";<span class="fragment fade-out display-none" data-fragment-index="3">// ???</span><span class="fragment fade-in" data-fragment-index="3">// "Test"</span></code></pre></div><div class="type fragment fade-right" data-fragment-index="4">OR</div><div class="type-example fragment fade-right" data-fragment-index="4"><pre><code class="javascript hljs" data-noescape>const value = false || false ? 5 : 1;<span class="fragment fade-out display-none" data-fragment-index="5">// ???</span><span class="fragment fade-in" data-fragment-index="5">// 1</span>const val = true || "Test";<span class="fragment fade-out display-none" data-fragment-index="6">// ???</span><span class="fragment fade-in" data-fragment-index="6">// true</span></code></pre></div><div class="type fragment fade-right" data-fragment-index="7">!</div><div class="type-example fragment fade-right" data-fragment-index="7"><pre><code class="javascript hljs" data-noescape>const value = !(false || false) ? 5 : 1;<span class="fragment fade-out display-none" data-fragment-index="8">// ???</span><span class="fragment fade-in" data-fragment-index="8">// 5</span></code></pre></div><div class="type fragment fade-right" data-fragment-index="9">!!</div><div class="type-example fragment fade-right" data-fragment-index="9"><pre><code class="javascript hljs" data-noescape> 
+let value = !!"Elo";<span class="fragment fade-out display-none" data-fragment-index="10">// ???</span><span class="fragment fade-in" data-fragment-index="10">// true</span>let val = "JavaScript" > "Kotlin";<span class="fragment fade-out display-none" data-fragment-index="11">// ???</span><span class="fragment fade-in" data-fragment-index="11">// false</span></code></pre></div><div class="type fragment fade-right" data-fragment-index="12">< lub></div><div class="type-example fragment fade-right" data-fragment-index="12"><pre><code class="javascript hljs" data-noescape> 
+let value = 5 > 1;<span class="fragment fade-out display-none" data-fragment-index="13">// ???</span><span class="fragment fade-in" data-fragment-index="13">// true</span>let val = !!"";<span class="fragment fade-out display-none" data-fragment-index="14">// ???</span><span class="fragment fade-in" data-fragment-index="14">// false</span></code></pre></div></div></section><section id="falsy"><h4>Falsy values</h4><ol><li class="fragment fade-right">0</li><li class="fragment fade-right">null</li><li class="fragment fade-right">undefined</li><li class="fragment fade-right">false</li><li class="fragment fade-right">NaN</li><li class="fragment fade-right">""</li></ol></section><section id="falsy"><h4>== vs ===</h4></section><section id="objects"><span class="go-to-github-example"><a href="https://github.com/Obryko/js-jsk-examples/blob/master/1-variablesAndScope/objects.js" target="_blank"><img class="example-image" src="https://static.thenounproject.com/png/2075975-200.png"></a></span><h4>Obiekty</h4><p class="fragment fade-right">W JavaScript <u>prawie</u>wszystko jest obiektem!</p><pre class="fragment fade-right"><code class="javascript hljs">function show() {
+console.log(this.brand + " koloru " + this.color);
+}
+ 
+const car1 = {
+brand : "Mercedes",
+color : "czerwony",
+showText : show
+}
+ 
+const car2 = {
+brand : "BMW",
+color : "czarny",
+showText : show
+}
+ 
+car1.showText(); //"Mercedes koloru czerwony"
+car2.showText(); //"BMW koloru czarny"</code></pre></section><section><h4>Dostęp do pól obiektów.</h4><pre class="fragment fade-right" data-fragment-index="0"><code class="javascript hljs" data-noescape>const car = {
+brand : "Mercedes",
+color : "czerwony",
+showText : show
+}<div class="fragment fade-in align-div" data-fragment-index="1">// Sprawdzanie po polu<span>car.brand; // "Mercedes"</span></div><div class="fragment fade-in align-div" data-fragment-index="2">// Dodawanie pola<span>car.year = 2002;</span></div><div class="fragment fade-in align-div" data-fragment-index="3">// Pobieranie pola po nazwie w string<span>car['year']; // 2002</span></div></code></pre></section><section><h4>Iteracja po obiekcie</h4><pre class="fragment fade-right" data-fragment-index="0"><code class="javascript hljs" data-noescape>const car = {
+brand : "Mercedes",
+color : "czerwony",
+showText : show
+}</code></pre><pre class="fragment fade-right" data-fragment-index="1"><code class="javascript hljs" data-noescape>for(const key in car) {
+console.log(key);<span class="fragment fade-out display-none" data-fragment-index="2">// ???</span><span class="fragment fade-in" data-fragment-index="2">// brand kolor showText</span>}
+Object.keys(car);<span class="fragment fade-out display-none" data-fragment-index="3">// ???</span><span class="fragment fade-in" data-fragment-index="3">// ['brand', 'kolor','showText']</span></code></pre><pre class="fragment fade-right" data-fragment-index="4"><code class="javascript hljs" data-noescape>for(const key in car) {
+console.log(car[key]);<span class="fragment fade-out display-none" data-fragment-index="5">// ???</span><span class="fragment fade-in" data-fragment-index="5">// ['Mercedes', 'czerwony', f]</span>}
+Object.values(car);<span class="fragment fade-out display-none" data-fragment-index="6">// ???</span><span class="fragment fade-in" data-fragment-index="6">// ['Mercedes', 'czerwony', f]</span></code></pre></section><section><h4>Destrukturyzacja obiektów</h4><p>Destrukturyzacja pozawala rozłozyć obiekt na pojedyncze pola.</p><pre class="fragment fade-right" style="width: 110%;" data-fragment-index="1"><code class="javascript hljs" data-noescape>const car = {
+brand : "Mercedes",
+color : "czerwony"
+}<span class="fragment fade-in" data-fragment-index="2">const { brand, color } = car;</span></code></pre><pre class="fragment fade-right" style="width: 110%;" data-fragment-index="3"><code class="javascript hljs" data-noescape>const engine = {
+capacity : 2,
+fuel : "disel"
+}<span class="fragment fade-in" data-fragment-index="4">const carWithEngine = {...car, ...engine};</span><span class="fragment fade-in" data-fragment-index="5">console.log(carWithEngine); // { brand: "Mercedes", color: "czerwony", capacity: 2, fuel: "disel"};</span></code></pre></section><section id="prototyps"><span class="go-to-github-example"><a href="https://github.com/Obryko/js-jsk-examples/blob/master/1-variablesAndScope/prototyps.js" target="_blank"><img class="example-image" src="https://static.thenounproject.com/png/2075975-200.png"></a></span><h4>Prototypy</h4><p>Każda funckja w JavaScript posiada swój prototyp.</p><p>Prototyp jest to obiekt definiujący funkcje należące do konkretnego typu obiektu - podobnie jak w przypadku klas
+w innych językach programowania.</p><h5>Ale w przypadku prototypów nalepiej przejść od razu do przykładów.</h5></section><section id="arrys"><span class="go-to-github-example"><a href="https://github.com/Obryko/js-jsk-examples/blob/master/1-variablesAndScope/arrys.js" target="_blank"><img class="example-image" src="https://static.thenounproject.com/png/2075975-200.png"></a></span><h4>Operacje na tablicach</h4><p>Obiekt typu Array posiada w swoim prototypie wiele metod przydatych do wykonywnia opreacji na danych.</p><p>Każda taka funkcja w domyśle przyjmuje, wspomniany już callback, który może posiadać do trzech argumentów:</p><ol><li>Aktualnie przetwarzana wartość</li><li>Index na któym znajduje się wartość</li><li>Tablica na której wykonywana jest operacja</li></ol></section><section><h4>Podstawowe funckje na tablicach</h4><pre class="fragment fade-in small-pre margined" data-fragment-index="1"><code class="javascript hljs" data-noescape> 
+const data = [1,2,3,4];
+data.forEach((val,index) => consol.log(`Value ${val}, is on index ${index}));</code></pre><pre class="fragment fade-in small-pre margined" data-fragment-index="2"><code class="javascript hljs" data-noescape>const data = [1,2,3,4];
+data.map((val,index) => val * index);<span class="fragment fade-out display-none" data-fragment-index="3">// ???</span><span class="fragment fade-in" data-fragment-index="3">// [0, 2, 6, 12]</span></code></pre><pre class="fragment fade-in small-pre margined" data-fragment-index="4"><code class="javascript hljs" data-noescape>const data = [{}, '', 15, null];
+const callback = (val) => typeof val === "number" || typeof val === "undefined";
+data.filter(callback);<span class="fragment fade-out display-none" data-fragment-index="5">// ???</span><span class="fragment fade-in" data-fragment-index="5">// [15]</span></code></pre><pre class="fragment fade-in small-pre margined" data-fragment-index="6"><code class="javascript hljs" data-noescape>const data = ["Java", "JavaScript", "StarterKit", "Capgemini"];
+data.find(val => val.length > 4);<span class="fragment fade-out display-none" data-fragment-index="7">// ???</span><span class="fragment fade-in" data-fragment-index="7">//  "JavaScript"</span></code></pre></section><section><h4>Array.prototype.reduce</h4><pre class="fragment fade-in small-pre margined" data-fragment-index="1"><code class="javascript hljs" data-noescape>const data = [1,2,3,4];
+data.reduce((acc, curr, index) => {
+return acc+curr;
+}, 0);<span class="fragment fade-out display-none" data-fragment-index="2">// ???</span><span class="fragment fade-in" data-fragment-index="2">//  10</span></code></pre><pre class="fragment fade-in small-pre margined" data-fragment-index="3"><code class="javascript hljs" data-noescape>const data = [1,2,3,4,5,6];
+data.reduce((acc, curr, index) => {
+return curr % 2 ? [...acc, curr] : acc;
+}, []);<span class="fragment fade-out display-none" data-fragment-index="4">// ???</span><span class="fragment fade-in" data-fragment-index="4">//  [1, 3, 5]</span></code></pre></section><section><h4>Destrukturyzacja tablic</h4><pre class="fragment fade-in small-pre margined" data-fragment-index="1"><code class="javascript hljs" data-noescape>const data = [1,2,3]
+const test = [4,5,6];
+[...test, ...data]<span class="fragment fade-out display-none" data-fragment-index="2">// ???</span><span class="fragment fade-in" data-fragment-index="2">//  [4, 5, 6, 1, 2, 3]</span></code></pre><pre class="fragment fade-in small-pre margined" data-fragment-index="3"><code class="javascript hljs" data-noescape>const position = [52, 35];
+const [x, y] = position;<span class="fragment fade-out display-none" data-fragment-index="4">// ???</span><span class="fragment fade-in" data-fragment-index="4">//  x = 52; y = 35</span></code></pre></section></section><section id="browser"><section id="intro-brwoser"><h2>Przeglądarka, a JavaScript</h2></section><section><span class="go-to-github-example"><a href="https://github.com/Obryko/js-jsk-examples/blob/master/1-variablesAndScope/arrys.js" target="_blank"><img class="example-image" src="https://static.thenounproject.com/png/2075975-200.png"></a></span><h4>Podłączenie JS do HTML</h4><p>Na końcu tag-u body w html dodajemy script tag:</p><pre class="fragment fade-right"><code class="hljs-tag hljs"> 
+&lt;script src="path"&gt;&lt;/script&gt;</code></pre><p class="fragment fade-right">,gdzie path to ścieżka do naszego pliku JavaScript</p></section><section><p><a href="https://developer.mozilla.org/pl/docs/Dokumentacja_Gecko_DOM/Wprowadzenie">DOM</a>- (ang. Document
+Objecty Model) stanowi API dla dokumentów HTML i XML. Odpowiada za dwie rzeczy: zapewnia
+reprezentację struktury dokumentu oraz określa, w jaki sposób odnosić się do tej struktury z poziomu
+skryptu.</p></section><section><h4>Obiekt <a href="https://developer.mozilla.org/pl/docs/Web/API/Document">DOCUMENT</a></h4><ul class="code-ul"><li class="fragment fade-right"><pre class="small-pre"><code class="javascript hljs">docuemnt.getElementById('id');</code></pre></li><li class="fragment fade-right"><pre class="small-pre"><code class="javascript hljs">docuemnt.getElementsByClassName("className");</code></pre></li><li class="fragment fade-right"><pre class="small-pre"><code class="javascript hljs">docuemnt.getElementsByTagName("tag");</code></pre></li><li class="fragment fade-right"><pre class="small-pre"><code class="javascript hljs">document.createElement('tag');</code></pre></li><li class="fragment fade-right"><pre class="small-pre"><code class="javascript hljs">document.createTextNode('Some text');</code></pre></li></ul></section></section><section id="testing"><section id="intro-testing"><h2>Testowanie</h2></section><section><h4>Biblioteka <a href="https://jestjs.io/">JEST</a></h4><p>JEST to bezkonfiguracyjny freamwork do testowania kodu napisanego w technologiach opartych o JavaScript.</p><img src="https://www.lambdatest.com/blog/wp-content/uploads/2019/01/image7-5.png" alt=""></section><section><h4>Gdzie umieszczamy testy?</h4><ul><li>Obok pliku testowanego. Plik z testami jest tej samej nazwy co plik testowany lecz z rozszerzeniem
+.test.js</li><li>W folderze katalogu __TESTS__</li><li>W osobnym folderze z testami (obok folderu src - jak w Java)</li></ul></section><section><h4>Z czego składa się plik testami?</h4><pre class="fragment fade-right"><code class="javascript hljs" data-trim data-line-numbers="1,15|2,10|12|3-9|14">describe('Opis głowny przypadków testowych', () => {
+  it('pojedynczy test', () => {
+      //given
+      const a = 5;
+      const b = 6;
+      //when
+      const value = add(a,b);
+      //then
+      expect(value).toEqual(11);
+  });
+  test('Inny test', () => {...});
+  describe('Podblok z testami', () => {...})
+});</code></pre></section><section><h4>Mockowanie obiektu document i window oraz funkcji</h4><pre class="fragment fade-right"><code class="javascript hljs">describe('', () => {
+  it('test', () => {
+      //given
+      globalThis.document = {
+          getElementById = jest.fn()
+      }
+      ...
+      //then
+      expect(global.document.getElementById).toHaveBeenCalled();
+  });
+});</code></pre></section></section><section id="project"><section id="intro-project"><h2>Projekt i zaliczenie</h2></section><section id="project-configuration"><h4>Konfiguracja projektu</h4><ol><li><span>Pobieramy i instalujemy <a href="https://nodejs.org/en/">Node.js</a>ze strony głównej lub za
+pomoca<a href="https://github.com/coreybutler/nvm-windows">NVM</a></span></li><li><span>Pobieramy template projektu z <a href="https://github.com/Obryko/js-jsk-template">repo</a>,
+jako zip.</span></li><li><span>Wypakowujemy w miejscu projektu i wpisujemy w konsoli <code class="bash hljs custom-bash">npm install</code>.</span></li><li><span>W celu startu aplikacji developerskiej wpisujemy w konsoli <code class="bash hljs custom-bash">npm start</code></span></li><li><span>W celu zbudowania aplikacji produkcyjnej wpisujemy w konsoli <code class="bash hljs custom-bash">npm run build</code></span></li></ol></section><section><h4>Jak skomunikować ze sobą pliki?</h4><pre class="fragment fade-right"><code class="javascript hljs">export const getName = () => {};
+export const YEAR = "2020"
+const init = () => {};
+export defult init;</code></pre><pre class="fragment fade-right"><code class="javascript hljs">import { getName } from "file";
+improt { YEAR } from "other";
+import { getName, YEAR } from "file";
+ 
+import init from "file";
+import init, { getName, YEAR } from "file";</code></pre></section></section><section id="summary"><section id="intro-summary"><h2>Podsumowanie</h2></section><section id="links"><div class="agenda-align"><h4>Przydatne link:</h4><ul><li><a href="https://developer.mozilla.org/pl/docs/Web">MDN</a></li><li><a href="https://www.youtube.com/channel/UC_MIaHmSkt9JHNZfQ_gUmrg">Overment - YT</a></li><li><a href="https://www.youtube.com/channel/UCq8XmOMtrUCb8FcFHQEd8_g">Hello Roman - YT</a></li><li><a href="https://flexboxfroggy.com/#pl">Flexbox CSS</a></li><li><a href="https://cssgridgarden.com/#pl">GRID CSS</a></li></ul></div></section></section><section id="end"><h3>Dziękuję za uwagę 😃</h3><h4>I powodzenia!</h4></section></div></div><script type="module" src="./index.js" defer></script></body></html>

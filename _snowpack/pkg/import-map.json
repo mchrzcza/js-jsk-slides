@@ -1,0 +1,11 @@
+{
+  "imports": {
+    "reveal.js": "./revealjs.js",
+    "reveal.js/plugin/highlight/highlight.esm": "./revealjs/plugin/highlight/highlight.esm.js",
+    "reveal.js/plugin/markdown/markdown.esm": "./revealjs/plugin/markdown/markdown.esm.js",
+    "reveal.js/plugin/math/math.esm": "./revealjs/plugin/math/math.esm.js",
+    "reveal.js/plugin/notes/notes.esm": "./revealjs/plugin/notes/notes.esm.js",
+    "reveal.js/plugin/search/search.esm": "./revealjs/plugin/search/search.esm.js",
+    "reveal.js/plugin/zoom/zoom.esm": "./revealjs/plugin/zoom/zoom.esm.js"
+  }
+}
