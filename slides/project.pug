@@ -1,0 +1,43 @@
+section#project
+	section#intro-project
+		h2 Projekt i zaliczenie
+	section#project-configuration
+		h4 Konfiguracja projektu
+		ol
+			li
+				span Pobieramy i instalujemy 
+					a(href='https://nodejs.org/en/') Node.js
+					| ze strony głównej lub za
+					| pomoca
+					a(href='https://github.com/coreybutler/nvm-windows') NVM
+			li
+				span Pobieramy template projektu z 
+					a(href='https://github.com/Obryko/js-jsk-template') repo
+					| ,
+					| jako zip.
+			li
+				span Wypakowujemy w miejscu projektu i wpisujemy w konsoli 
+					code.bash.hljs.custom-bash npm install
+					| .
+			li
+				span W celu startu aplikacji developerskiej wpisujemy w konsoli 
+					code.bash.hljs.custom-bash npm start
+			li
+				span W celu zbudowania aplikacji produkcyjnej wpisujemy w konsoli 
+					code.bash.hljs.custom-bash npm run build
+	section
+		h4 Jak skomunikować ze sobą pliki?
+		pre.fragment.fade-right
+			code.javascript.hljs
+				| export const getName = () => {};
+				| export const YEAR = "2020"
+				| const init = () => {};
+				| export defult init;
+		pre.fragment.fade-right
+			code.javascript.hljs
+				| import { getName } from "file";
+				| improt { YEAR } from "other";
+				| import { getName, YEAR } from "file";
+				| 
+				| import init from "file";
+				| import init, { getName, YEAR } from "file";

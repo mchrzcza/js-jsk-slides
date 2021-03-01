@@ -1,0 +1,49 @@
+section#testing
+	section#intro-testing
+		h2 Testowanie
+	section
+		h4 Biblioteka 
+			a(href='https://jestjs.io/') JEST
+		p JEST to bezkonfiguracyjny freamwork do testowania kodu napisanego w technologiach opartych o JavaScript.
+		img(src='https://www.lambdatest.com/blog/wp-content/uploads/2019/01/image7-5.png', alt='')
+	section
+		h4 Gdzie umieszczamy testy?
+		ul
+			li
+				| Obok pliku testowanego. Plik z testami jest tej samej nazwy co plik testowany lecz z rozszerzeniem
+				| .test.js
+			li W folderze katalogu __TESTS__
+			li W osobnym folderze z testami (obok folderu src - jak w Java)
+	section
+		h4
+			| Z czego składa się plik testami?
+		pre.fragment.fade-right
+			code.javascript.hljs(data-trim, data-line-numbers='1,15|2,10|12|3-9|14')
+				| describe('Opis głowny przypadków testowych', () => {
+				|   it('pojedynczy test', () => {
+				|       //given
+				|       const a = 5;
+				|       const b = 6;
+				|       //when
+				|       const value = add(a,b);
+				|       //then
+				|       expect(value).toEqual(11);
+				|   });
+				|   test('Inny test', () => {...});
+				|   describe('Podblok z testami', () => {...})
+				| });
+	section
+		h4 Mockowanie obiektu document i window oraz funkcji
+		pre.fragment.fade-right
+			code.javascript.hljs
+				| describe('', () => {
+				|   it('test', () => {
+				|       //given
+				|       globalThis.document = {
+				|           getElementById = jest.fn()
+				|       }
+				|       ...
+				|       //then
+				|       expect(global.document.getElementById).toHaveBeenCalled();
+				|   });
+				| });

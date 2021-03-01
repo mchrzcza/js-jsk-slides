@@ -1,0 +1,34 @@
+section#scope
+	p.fragment.fade-right Scope (Zakres) w JavaScript definiuje, do których zamiennych mamy dostęp.
+	p.fragment.fade-right Istnieją dwa rodzaje takiego zakresu: globalny oraz lokalny.
+	pre.fragment.fade-right
+		code.javascript.hljs
+			| const name = "John";
+			| function fn(name) {
+			| console.log(name); //undefined
+			| const test = "Test";
+			| console.log(test); // "Test"
+			| }
+			| fn();
+			| console.log(test); // test is not defined
+section#clousers
+	p
+		a(href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures') Clousers
+		| (domknięcia) jest
+		| kombinacją funkcji spakowanej razem (zawartej) z odniesieniami do jej otaczającego
+		| stanu (środowiska leksykalnego). Innymi słowy, domknięcie daje dostęp do zakresu funkcji zewnętrznej z funkcji
+		| wewnętrznej. W JavaScript, zamknięcia są tworzone za każdym razem, gdy funkcja jest tworzona, w czasie tworzenia
+		| funkcji.
+section#hoisting
+	p.fragment.fade-right
+		| Hoisting to mechanizm w języku JavaScript, który polega na tym, że silnik JS
+		| wyszukuje wszystkie deklaracje
+		| zmiennych (i funkcji) w danej funkcji i przenosi je na początek.
+	pre.fragment.fade-right
+		code.javascript.hljs
+			| function fn() {
+			| console.log(test); //undefined
+			| var test = "Test";
+			| console.log(test); // "Test"
+			| }
+	p.fragment.fade-right Hoisting nie działa w przypadku let oraz const.

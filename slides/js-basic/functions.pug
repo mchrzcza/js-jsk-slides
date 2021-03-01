@@ -1,0 +1,58 @@
+section#functions
+	span.go-to-github-example
+		a(href='https://github.com/Obryko/js-jsk-examples/blob/master/js-basic/functions.js', target='_blank')
+			img.example-image(src='https://static.thenounproject.com/png/2075975-200.png')
+	h4 Funkcje
+	pre.fragment.fade-right.small-pre
+		code.javascript.hljs
+			| function foo(name) {
+			| 	console.log(`Cześć ${name}!`);
+			| 	return name.toUpperCase();
+			| };
+	pre.fragment.fade-right.small-pre
+		code.javascript.hljs
+			| const foo = function(name) {
+			| 	console.log(`Cześć ${name}!`);
+			| 	return name.toUpperCase();
+			| };
+	pre.fragment.fade-right.small-pre
+		code.javascript.hljs
+			| const foo = (name) => {
+			| 	console.log(`Cześć ${name}!`);
+			| 	return name.toUpperCase();
+			| };
+	pre.fragment.fade-right.small-pre
+		code.javascript.hljs
+			| const foo = (name) => name.toUpperCase();
+section
+	h4 Funckje również podlegają hoistingowi.
+	pre.fragment.fade-right.small-pre(data-fragment-index='1')
+		code.javascript.hljs(data-noescape)
+			| bar("Tomek"); //
+			span.fragment.fade-out.display-none(data-fragment-index='2') ???
+			span.fragment.fade-in(data-fragment-index='2') Cześć Tomek!
+			| function bar(name) {
+			| 	return `Cześć ${name}!`;
+			| }
+	pre.fragment.fade-right.small-pre(data-fragment-index='3')
+		code.javascript.hljs(data-noescape)
+			| bar("Tomek");
+			span.fragment.fade-out.display-none(data-fragment-index='4') // ???
+			span.fragment.fade-in.error(data-fragment-index='4') // Cannot access 'bar' before initialization
+			| const bar = function(name) {
+			| 	return `Cześć ${name}!`;
+			| };
+	pre.fragment.fade-right.small-pre(data-fragment-index='5')
+		code.javascript.hljs(data-noescape)
+			| bar("Tomek");
+			span.fragment.fade-out.display-none(data-fragment-index='6') // ???
+			span.fragment.fade-in.error(data-fragment-index='6') // Cannot access 'bar' before initialization
+			| const bar = name => {
+			| 	return `Cześć ${name}!`;
+			| };
+	pre.fragment.fade-right.small-pre(data-fragment-index='7')
+		code.javascript.hljs(data-noescape)
+			| bar("Tomek");
+			span.fragment.fade-out.display-none(data-fragment-index='8') // ???
+			span.fragment.fade-in.error(data-fragment-index='8') // Cannot access 'bar' before initialization
+			| const bar = name => `Cześć ${name}!`;

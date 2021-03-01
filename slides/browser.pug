@@ -1,0 +1,45 @@
+section#browser
+	section#intro-brwoser
+		h2 Przeglądarka, a JavaScript
+	section
+		span.go-to-github-example
+			a(href='https://github.com/Obryko/js-jsk-examples/blob/master/1-variablesAndScope/arrys.js', target='_blank')
+				img.example-image(src='https://static.thenounproject.com/png/2075975-200.png')
+		h4 Podłączenie JS do HTML
+		p Na końcu tag-u body w html dodajemy script tag:
+		pre.fragment.fade-right
+			code.hljs-tag.hljs
+				| 
+				| &lt;script src="path"&gt;&lt;/script&gt;
+		p.fragment.fade-right ,gdzie path to ścieżka do naszego pliku JavaScript
+	section
+		p
+			a(href='https://developer.mozilla.org/pl/docs/Dokumentacja_Gecko_DOM/Wprowadzenie') DOM
+			| - (ang. Document
+			| Objecty Model) stanowi API dla dokumentów HTML i XML. Odpowiada za dwie rzeczy: zapewnia
+			| reprezentację struktury dokumentu oraz określa, w jaki sposób odnosić się do tej struktury z poziomu
+			| skryptu.
+	section
+		h4 Obiekt 
+			a(href='https://developer.mozilla.org/pl/docs/Web/API/Document') DOCUMENT
+		ul.code-ul
+			li.fragment.fade-right
+				pre.small-pre
+					code.javascript.hljs
+						| docuemnt.getElementById('id');
+			li.fragment.fade-right
+				pre.small-pre
+					code.javascript.hljs
+						| docuemnt.getElementsByClassName("className");
+			li.fragment.fade-right
+				pre.small-pre
+					code.javascript.hljs
+						| docuemnt.getElementsByTagName("tag");
+			li.fragment.fade-right
+				pre.small-pre
+					code.javascript.hljs
+						| document.createElement('tag');
+			li.fragment.fade-right
+				pre.small-pre
+					code.javascript.hljs
+						| document.createTextNode('Some text');
