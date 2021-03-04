@@ -1,28 +1,28 @@
 /* Deafult reveal.js stylesheet */
-@import "/node_modules/reveal.js/dist/reset.css";
-@import "/node_modules/reveal.js/dist/reveal.css";
+@import "reveal.js/dist/reset.css";
+@import "reveal.js/dist/reveal.css";
 
 /* Theme used for slides */
-@import "/node_modules/reveal.js/dist/theme/black.css";
-/* @import "/node_modules/reveal.js/dist/theme/beige.css"; */
-/* @import "/node_modules/reveal.js/dist/theme/blood.css"; */
-/* @import "/node_modules/reveal.js/dist/theme/league.css"; */
-/* @import "/node_modules/reveal.js/dist/theme/moon.css"; */
-/* @import "/node_modules/reveal.js/dist/theme/night.css"; */
-/* @import "/node_modules/reveal.js/dist/theme/serif.css"; */
-/* @import "/node_modules/reveal.js/dist/theme/simple.css"; */
-/* @import "/node_modules/reveal.js/dist/theme/sky.css"; */
-/* @import "/node_modules/reveal.js/dist/theme/solarized.css"; */
-/* @import "/node_modules/reveal.js/dist/theme/white.css"; */
+@import "reveal.js/dist/theme/black.css";
+/* @import "reveal.js/dist/theme/beige.css"; */
+/* @import "reveal.js/dist/theme/blood.css"; */
+/* @import "reveal.js/dist/theme/league.css"; */
+/* @import "reveal.js/dist/theme/moon.css"; */
+/* @import "reveal.js/dist/theme/night.css"; */
+/* @import "reveal.js/dist/theme/serif.css"; */
+/* @import "reveal.js/dist/theme/simple.css"; */
+/* @import "reveal.js/dist/theme/sky.css"; */
+/* @import "reveal.js/dist/theme/solarized.css"; */
+/* @import "reveal.js/dist/theme/white.css"; */
 
 /* Theme used for syntax highlighting of code */
-@import "/node_modules/reveal.js/plugin/highlight/monokai.css";
-/* @import "/node_modules/reveal.js/plugin/highlight/zenburn.css"; */
+@import "reveal.js/plugin/highlight/monokai.css";
+/* @import "reveal.js/plugin/highlight/zenburn.css"; */
 
 /* Style used for printing to pdf and on paper */
 
-/* @import "/node_modules/reveal.js/dist/print/paper.css"; */
-/* @import "/node_modules/reveal.js/plugin/print/pdf.css"; */
+/* @import "reveal.js/dist/print/paper.css"; */
+/* @import "reveal.js/plugin/print/pdf.css"; */
 
 .agenda-align {
   display: flex;
