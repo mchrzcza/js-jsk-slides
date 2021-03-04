@@ -5,7 +5,7 @@
   "homepage": "https://obryko.github.io/js-jsk-slides",
   "scripts": {
     "start": "parcel serve ./src/index.pug",
-    "build": "parcel build ./src/index.pug"
+    "build": "parcel build ./src/index.pug --public-url ."
   },
   "author": {
     "name": "Kacper Obrycki",
