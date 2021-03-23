@@ -5,9 +5,9 @@ section#scope
 		code.javascript.hljs
 			| const name = "John";
 			| function fn(name) {
-			| console.log(name); //undefined
-			| const test = "Test";
-			| console.log(test); // "Test"
+			| 	console.log(name); //undefined
+			| 	const test = "Test";
+			| 	console.log(test); // "Test"
 			| }
 			| fn();
 			| console.log(test); // test is not defined
@@ -20,15 +20,15 @@ section#clousers
 		| wewnętrznej. W JavaScript, zamknięcia są tworzone za każdym razem, gdy funkcja jest tworzona, w czasie tworzenia
 		| funkcji.
 section#hoisting
-	p.fragment.fade-right
-		| Hoisting to mechanizm w języku JavaScript, który polega na tym, że silnik JS
-		| wyszukuje wszystkie deklaracje
-		| zmiennych (i funkcji) w danej funkcji i przenosi je na początek.
+	p
+		a(href='https://developer.mozilla.org/pl/docs/Glossary/Hoisting') Hoisting
+		|  to mechanizm w języku JavaScript, który polega na wyszukiwaniu przez silnik JS wszelkich deklaracji zmiennych i funkcji w danym bloku kodu lub funkcji. Nastepnie przenosi deklaracje na początek tego bloku lub funkcji.
 	pre.fragment.fade-right
 		code.javascript.hljs
 			| function fn() {
-			| console.log(test); //undefined
-			| var test = "Test";
-			| console.log(test); // "Test"
+			| 	console.log(test); //undefined
+			| 	var test = "Test";
+			| 	console.log(test); // "Test"
 			| }
 	p.fragment.fade-right Hoisting nie działa w przypadku let oraz const.
+	p.fragment.fade-right Dla let i const dostaniemy Reference Error.

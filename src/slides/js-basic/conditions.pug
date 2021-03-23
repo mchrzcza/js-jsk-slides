@@ -4,9 +4,9 @@ section#conditions
 		code.javascript.hljs(data-noescape)
 			| const condition = true;
 			| if(condition) {
-			| console.log(true);
+			| 	console.log(true);
 			| } else {
-			| console.log(false);
+			| 	console.log(false);
 			| }
 	pre.fragment.fade-in.margined(data-fragment-index='2')
 		code.javascript.hljs(data-noescape)
@@ -23,6 +23,7 @@ section
 					| const value = true && true ? 5 : 1;
 					span.fragment.fade-out.display-none(data-fragment-index='2') // ???
 					span.fragment.fade-in(data-fragment-index='2') // 5
+					|
 					| const val = true && "Test";
 					span.fragment.fade-out.display-none(data-fragment-index='3') // ???
 					span.fragment.fade-in(data-fragment-index='3') // "Test"
@@ -34,6 +35,7 @@ section
 					| const value = false || false ? 5 : 1;
 					span.fragment.fade-out.display-none(data-fragment-index='5') // ???
 					span.fragment.fade-in(data-fragment-index='5') // 1
+					|
 					| const val = true || "Test";
 					span.fragment.fade-out.display-none(data-fragment-index='6') // ???
 					span.fragment.fade-in(data-fragment-index='6') // true
@@ -50,23 +52,23 @@ section
 		.type-example.fragment.fade-right(data-fragment-index='9')
 			pre
 				code.javascript.hljs(data-noescape)
-					| 
 					| let value = !!"Elo";
 					span.fragment.fade-out.display-none(data-fragment-index='10') // ???
 					span.fragment.fade-in(data-fragment-index='10') // true
-					| let val = "JavaScript" > "Kotlin";
+					|
+					| let val = !!"";
 					span.fragment.fade-out.display-none(data-fragment-index='11') // ???
 					span.fragment.fade-in(data-fragment-index='11') // false
 		.type.fragment.fade-right(data-fragment-index='12')
-			| < lub>
+			| < lub >
 		.type-example.fragment.fade-right(data-fragment-index='12')
 			pre
 				code.javascript.hljs(data-noescape)
-					| 
 					| let value = 5 > 1;
 					span.fragment.fade-out.display-none(data-fragment-index='13') // ???
 					span.fragment.fade-in(data-fragment-index='13') // true
-					| let val = !!"";
+					|
+					| let val = "JavaScript" > "Kotlin";
 					span.fragment.fade-out.display-none(data-fragment-index='14') // ???
 					span.fragment.fade-in(data-fragment-index='14') // false
 section#falsy
@@ -80,3 +82,10 @@ section#falsy
 		li.fragment.fade-right ""
 section#falsy
 	h4 == vs ===
+	p.fragment.fade-right(data-fragment-index='1') 
+		| == - porównujemy wartość
+	p.fragment.fade-right(data-fragment-index='2')  
+		| === - porównujemy wartość i typ
+	span.fragment.fade-right(data-fragment-index='3') Powinno się stosować 
+		span.fragment.fade-out.display-none(data-fragment-index='4') ???
+		span.fragment.fade-right(data-fragment-index='4') ===

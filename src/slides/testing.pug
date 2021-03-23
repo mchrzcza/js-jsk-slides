@@ -32,18 +32,3 @@ section#testing
 				|   test('Inny test', () => {...});
 				|   describe('Podblok z testami', () => {...})
 				| });
-	section
-		h4 Mockowanie obiektu document i window oraz funkcji
-		pre.fragment.fade-right
-			code.javascript.hljs
-				| describe('', () => {
-				|   it('test', () => {
-				|       //given
-				|       globalThis.document = {
-				|           getElementById = jest.fn()
-				|       }
-				|       ...
-				|       //then
-				|       expect(global.document.getElementById).toHaveBeenCalled();
-				|   });
-				| });

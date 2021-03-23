@@ -1,0 +1,62 @@
+section#promises
+    h4 
+        a(href="https://developer.mozilla.org/pl/docs/Web/JavaScript/Reference/Global_Objects/Promise", target="_blank") Promise
+    p 
+        |Pozwala na obsłużenie z ewentualnym sukcesem lub porażką asynchronicznej akcji. 
+        |Pozwala to metodom asynchronicznym zwracać wartości takie jak metody synchroniczne, 
+        |zamiast natychmiastowego zwracania wartości końcowej, metoda asynchroniczna zwraca 
+        |obietnicę dostarczenia wartości w pewnym momencie w przyszłości.
+section 
+    pre.fragment.fade-right
+        code.javascript.hljs
+            |const promise = new Promise((resolve, reject) => {
+            |    setTimeout(function(){
+            |       resolve("Success!");
+            |    }, 250);
+            |});
+    pre.fragment.fade-right
+        code.javascript.hljs
+            |promise.then((msg) => {
+            |   console.log(msg); // "Success!" 
+            |}).catch((err) => {
+            |   console.log(err);    
+            |})
+    pre.fragment.fade-right
+        code.javascript.hljs
+            |const asyncFn = async () => {
+            |   try{
+            |       const result = await promise;
+            |       console.log(result); // "Success!"
+            |   } catch(e) {
+            |       console.log(e);
+            |   }
+            |}
+section
+    h4 
+        a(href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch") fetch
+    p 
+        a(href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch") Fetch API 
+        | jest interfejsem pozwalającym na asynchroniczne pobieranie zasobów.
+        | Fetch API powstało, aby uprościć sposób komunikacji z serwerem, a dzięki wykorzystaniu obietnic.
+    pre.fragment.fade-right
+        code.javascript.hljs
+            |fetch('https://example.com/posts/1')
+            |   .then(response => response.json())
+            |   .then(json => console.log(json));
+section
+    pre
+        code.javascript.hljs
+            |const data = {
+            |   title: 'Test title'
+            |};
+            |
+            |const options = {
+            |   method: 'POST',
+            |   body: JSON.stringify(data),
+            |   headers: {
+            |       'Content-Type': 'application/json'
+            |   }
+            |};
+            |fetch('https://example.com/posts', options)
+            |   .then(response => response.json())
+            |   .then(json => console.log(json));

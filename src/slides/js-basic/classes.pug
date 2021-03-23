@@ -1,0 +1,22 @@
+section#classes
+	h4 
+		a(href="https://developer.mozilla.org/pl/docs/Web/JavaScript/Reference/Classes") Klasy
+	p 
+		| Klasy w Javascript zostały wprowadzone w ECMAScript 2015 jako lukier składniowy (ang. syntactic sugar) 
+		| dla istniejącego, oparte na 
+		a(href="https://developer.mozilla.org/pl/docs/Web/JavaScript/Inheritance_and_the_prototype_chain") prototypach.
+	pre.fragment.fade-right
+		code.javascript.hljs(data-noescape)
+			|class Circle {
+			|	constructor(radius)	{
+			|		this.radius = radius;
+			|	}
+			|	
+			|	set radius(radius) {
+			|		this.radius = radius;
+			|	}
+			|	
+			|	get circumference() {
+			|		return 2*Math.PI*this.radius;
+			|	}
+			|}

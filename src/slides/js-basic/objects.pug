@@ -1,27 +1,24 @@
 section#objects
-	span.go-to-github-example
-		a(href='https://github.com/Obryko/js-jsk-examples/blob/master/1-variablesAndScope/objects.js', target='_blank')
-			img.example-image(src='https://static.thenounproject.com/png/2075975-200.png')
 	h4 Obiekty
 	p.fragment.fade-right W JavaScript 
 		u prawie
-		| wszystko jest obiektem!
+		|  wszystko jest obiektem!
 	pre.fragment.fade-right
 		code.javascript.hljs
 			| function show() {
-			| console.log(this.brand + " koloru " + this.color);
+			| 	console.log(this.brand + " koloru " + this.color);
 			| }
 			| 
 			| const car1 = {
-			| brand : "Mercedes",
-			| color : "czerwony",
-			| showText : show
+			| 	brand : "Mercedes",
+			| 	color : "czerwony",
+			| 	showText : show
 			| }
 			| 
 			| const car2 = {
-			| brand : "BMW",
-			| color : "czarny",
-			| showText : show
+			| 	brand : "BMW",
+			| 	color : "czarny",
+			| 	showText : show
 			| }
 			| 
 			| car1.showText(); //"Mercedes koloru czerwony"
@@ -31,34 +28,35 @@ section
 	pre.fragment.fade-right(data-fragment-index='0')
 		code.javascript.hljs(data-noescape)
 			| const car = {
-			| brand : "Mercedes",
-			| color : "czerwony",
-			| showText : show
+			| 	brand: "Mercedes",
+			| 	color: "czerwony",
+			| 	showText: show
 			| }
-			.fragment.fade-in.align-div(data-fragment-index='1')
+			.fragment.fade-in(data-fragment-index='1')
 				| // Sprawdzanie po polu
-				span car.brand; // "Mercedes"
-			.fragment.fade-in.align-div(data-fragment-index='2')
+				| car.brand; // "Mercedes"
+			.fragment.fade-in(data-fragment-index='2')
 				| // Dodawanie pola
-				span car.year = 2002;
-			.fragment.fade-in.align-div(data-fragment-index='3')
+				| car.year = 2002;
+			.fragment.fade-in(data-fragment-index='3')
 				| // Pobieranie pola po nazwie w string
-				span car['year']; // 2002
+				| car['year']; // 2002
 section
 	h4 Iteracja po obiekcie
 	pre.fragment.fade-right(data-fragment-index='0')
 		code.javascript.hljs(data-noescape)
 			| const car = {
-			| brand : "Mercedes",
-			| color : "czerwony",
-			| showText : show
+			| 	brand : "Mercedes",
+			| 	color : "czerwony",
+			| 	showText : show
 			| }
 	pre.fragment.fade-right(data-fragment-index='1')
 		code.javascript.hljs(data-noescape)
 			| for(const key in car) {
-			| console.log(key);
+			| 	console.log(key);
 			span.fragment.fade-out.display-none(data-fragment-index='2') // ???
 			span.fragment.fade-in(data-fragment-index='2') // brand kolor showText
+			|
 			| }
 			| Object.keys(car);
 			span.fragment.fade-out.display-none(data-fragment-index='3') // ???
@@ -66,9 +64,10 @@ section
 	pre.fragment.fade-right(data-fragment-index='4')
 		code.javascript.hljs(data-noescape)
 			| for(const key in car) {
-			| console.log(car[key]);
+			| 	console.log(car[key]);
 			span.fragment.fade-out.display-none(data-fragment-index='5') // ???
 			span.fragment.fade-in(data-fragment-index='5') // ['Mercedes', 'czerwony', f]
+			|
 			| }
 			| Object.values(car);
 			span.fragment.fade-out.display-none(data-fragment-index='6') // ???
@@ -79,15 +78,19 @@ section
 	pre.fragment.fade-right(style='width: 110%;', data-fragment-index='1')
 		code.javascript.hljs(data-noescape)
 			| const car = {
-			| brand : "Mercedes",
-			| color : "czerwony"
+			| 	brand : "Mercedes",
+			| 	color : "czerwony"
 			| }
+			|
 			span.fragment.fade-in(data-fragment-index='2') const { brand, color } = car;
 	pre.fragment.fade-right(style='width: 110%;', data-fragment-index='3')
 		code.javascript.hljs(data-noescape)
 			| const engine = {
-			| capacity : 2,
-			| fuel : "disel"
+			| 	capacity : 2,
+			| 	fuel : "disel"
 			| }
-			span.fragment.fade-in(data-fragment-index='4') const carWithEngine = {...car, ...engine};
+			|
+			span.fragment.fade-in(data-fragment-index='4') 
+				|const carWithEngine = {...car, ...engine};
+				|
 			span.fragment.fade-in(data-fragment-index='5') console.log(carWithEngine); // { brand: "Mercedes", color: "czerwony", capacity: 2, fuel: "disel"};

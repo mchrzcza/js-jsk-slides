@@ -47,13 +47,13 @@
   margin: auto;
 }
 
-pre,
 pre > code {
-  margin: 0 auto !important;
-  padding: 0 !important;
+  padding: 10px !important;
 }
 
 pre {
+  margin: 0 auto !important;
+  padding: 0 !important;
   box-shadow: none !important;
   font-size: 0.4em !important;
 }

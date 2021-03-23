@@ -1,0 +1,16 @@
+section
+		h4 Jak skomunikować ze sobą pliki?
+		pre.fragment.fade-right
+			code.javascript.hljs
+				| export const getName = () => {};
+				| export const YEAR = "2020"
+				| const init = () => {};
+				| export defult init;
+		pre.fragment.fade-right
+			code.javascript.hljs
+				| import { getName } from "file";
+				| import { YEAR } from "other";
+				| import { getName, YEAR } from "file";
+				| 
+				| import init from "file";
+				| import init, { getName, YEAR } from "file";
