@@ -21,7 +21,6 @@
         <h1>JavaScript</h1>
         <h2>Java Starter Kit</h2>
       </hgroup>
-      <p><small>Autor <a href="mailto:kacper.obrycki@capgemini.com">Kacper Obrycki</a></small><small class="hash-margin"> # </small><small class="presentation-date"></small></p>
     </section>
     <section>
       <section id="agenda">
@@ -34,51 +33,6 @@
           <li class="fragment fade-right" data-fragment-index="5"><a class="fragment" href="#/intro-project" data-fragment-index="5">Projekt i zaliczenie</a></li>
         </ol>
       </section>
-      <section id="agenda-js-base">
-        <div class="agenda-align">
-          <h3>Podstwy JavaScript</h3>
-          <ul>
-            <li class="fragment fade-right" data-fragment-index="1"><a class="fragment highlight-current-green" href="#/variables" data-fragment-index="1"></a>Zmienne</li>
-            <li class="fragment fade-right" data-fragment-index="2"><a class="fragment highlight-current-green" href="#/functions" data-fragment-index="2"></a>Funkcje</li>
-            <li class="fragment fade-right" data-fragment-index="3"><a class="fragment highlight-current-green" href="#/objects" data-fragment-index="3"></a>Obiekty</li>
-            <li class="fragment fade-right" data-fragment-index="4"><a class="fragment highlight-current-green" href="#/conditions" data-fragment-index="4"></a>Warunki logiczne</li>
-            <li class="fragment fade-right" data-fragment-index="6"><a class="fragment highlight-current-green" href="#/arrys" data-fragment-index="6"></a>Operacje na tablicach</li>
-            <li class="fragment fade-right" data-fragment-index="7"><a class="fragment highlight-current-green" href="#/classes" data-fragment-index="7"></a>Klasy</li>
-            <li class="fragment fade-right" data-fragment-index="8"><a class="fragment highlight-current-green" href="#/clousers" data-fragment-index="8"></a>Scope & Clousers & Hoisting</li>
-            <li class="fragment fade-right" data-fragment-index="9"><a class="fragment highlight-current-green" href="#/promise" data-fragment-index="9"></a>Promise</li>
-          </ul>
-        </div>
-      </section>
-      <section id="agenda-browser">
-        <div class="agenda-align">
-          <h3>Przeglądarka, a JavaScript</h3>
-          <ul>
-            <li class="fragment fade-right" data-fragment-index="1"><span class="fragment highlight-current-green" data-fragment-index="1"></span>Podłączenie JS do HTML</li>
-            <li class="fragment fade-right" data-fragment-index="2"><span class="fragment highlight-current-green" data-fragment-index="2"></span>DOM</li>
-            <li class="fragment fade-right" data-fragment-index="3"><span class="fragment highlight-current-green" data-fragment-index="3"></span>Operacje na obiekcie dokument</li>
-          </ul>
-        </div>
-      </section>
-      <section id="agenda-testing">
-        <div class="agenda-align">
-          <h3>Testowanie</h3>
-          <ul>
-            <li class="fragment fade-right" data-fragment-index="1"><span class="fragment highlight-current-green" data-fragment-index="1"></span>Freamwork JEST.</li>
-            <li class="fragment fade-right" data-fragment-index="2"><span class="fragment highlight-current-green" data-fragment-index="2"></span>Gdzie umiejscowiść testy?</li>
-            <li class="fragment fade-right" data-fragment-index="3"><span class="fragment highlight-current-green" data-fragment-index="3"></span>Jak wygląda test?</li>
-          </ul>
-        </div>
-      </section>
-      <section id="agenda-project">
-        <div class="agenda-align">
-          <h3>Projekt i zaliczenie</h3>
-          <ul>
-            <li class="fragment fade-right" data-fragment-index="1"><a class="fragment highlight-current-green" href="#/project-configuration" data-fragment-index="1"></a>Konfiguracja projektu</li>
-            <li class="fragment fade-right" data-fragment-index="2"><a class="fragment highlight-current-green" href="#/typi-code" data-fragment-index="2"></a>Backend do projektu</li>
-            <li class="fragment fade-right" data-fragment-index="3"><a class="fragment highlight-current-green" href="#/project-task" data-fragment-index="3"></a>Zadanie projektowe</li>
-          </ul>
-        </div>
-      </section>
     </section>
     <section id="intro">
       <section id="intro-intro">
@@ -87,16 +41,6 @@
       <section>
         <h4>Gdzie spotkamy JS?</h4>
       </section>
-      <section>
-        <h4>REST endpoint w Node.js</h4>
-        <pre class="fragment fade-right"><code class="javascript hljs">import * as express from 'express';
-const app = express()
-const port = 3000
- 
-app.get('/', (req, res) => res.send('Hello World!'))
- 
-app.listen(port, () => console.log(`Example app listening on port ${port}!`))</code></pre>
-      </section>
     </section>
     <section id="js-basic">
       <section id="intro-js-basic">
@@ -104,14 +48,18 @@ app.listen(port, () => console.log(`Example app listening on port ${port}!`))</c
       </section>
       <section id="variables">
         <h4>Zmienne</h4>
-        <pre class="fragment fade-right"><code class="javascript hljs">var bad = [];
+        <pre class="fragment fade-right" data-fragment-index="1"><code class="javascript hljs">var bad = [];
 bad = "Test";
 var bad = 5;</code></pre>
-        <pre class="fragment fade-right"><code class="javascript hljs">const foo = "";
+        <pre class="fragment fade-right" data-fragment-index="2"><code class="javascript hljs">
+
+const foo = "";
 foo = 5; // Error: Assign to constant variable;</code></pre>
-        <pre class="fragment fade-right"><code class="javascript hljs">let bar = 1;
+        <pre class="fragment fade-right" data-fragment-index="3"><code class="javascript hljs">
+
+let bar = 1;
 bar = 5;
-let bat = 4; // Error</code></pre>
+let bar = 4; // Error</code></pre>
       </section>
       <section id="types">
         <h4><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures" target="_blank">Typy danych</a></h4>
@@ -144,7 +92,7 @@ console.log(typeof value); // object</code></pre>
           <div class="type fragment fade-right" data-fragment-index="6"><a href="https://developer.mozilla.org/pl/docs/Web/JavaScript/Referencje/Obiekty/null" target="_blank">null</a></div>
           <div class="type-example fragment fade-right" data-fragment-index="6">
             <pre><code class="javascript hljs" data-noescape="data-noescape">let value = null;
-console.log(typeof value); //<span class="fragment fade-out display-none" data-fragment-index="7">???</span><span class="fragment fade-in" data-fragment-index="7">object</span></code></pre>
+console.log(typeof value); //<span class="fragment fade-out display-none" data-fragment-index="7"> ???</span><span class="fragment fade-in" data-fragment-index="7"> object</span></code></pre>
           </div>
           <div class="type fragment fade-right" data-fragment-index="8"><a href="https://developer.mozilla.org/pl/docs/Web/JavaScript/Referencje/Obiekty/Symbol" target="_blank">symbol</a></div>
           <div class="type-example fragment fade-right" data-fragment-index="8">
@@ -169,23 +117,6 @@ console.log(typeof value); // symbol</code></pre>
 };</code></pre>
         <pre class="fragment fade-right small-pre"><code class="javascript hljs">const foo = (name) => name.toUpperCase();</code></pre>
       </section>
-      <section>
-        <h4>Funckje również podlegają hoistingowi.</h4>
-        <pre class="fragment fade-right small-pre" data-fragment-index="1"><code class="javascript hljs" data-noescape="data-noescape">bar("Tomek"); //<span class="fragment fade-out display-none" data-fragment-index="2">???</span><span class="fragment fade-in" data-fragment-index="2">Cześć Tomek!</span> 
-function bar(name) {
-	return `Cześć ${name}!`;
-}</code></pre>
-        <pre class="fragment fade-right small-pre" data-fragment-index="3"><code class="javascript hljs" data-noescape="data-noescape">bar("Tomek");<span class="fragment fade-out display-none" data-fragment-index="4">// ???</span><span class="fragment fade-in error" data-fragment-index="4">// Cannot access 'bar' before initialization</span> 
-const bar = function(name) {
-	return `Cześć ${name}!`;
-};</code></pre>
-        <pre class="fragment fade-right small-pre" data-fragment-index="5"><code class="javascript hljs" data-noescape="data-noescape">bar("Tomek");<span class="fragment fade-out display-none" data-fragment-index="6">// ???</span><span class="fragment fade-in error" data-fragment-index="6">// Cannot access 'bar' before initialization</span> 
-const bar = name => {
-	return `Cześć ${name}!`;
-};</code></pre>
-        <pre class="fragment fade-right small-pre" data-fragment-index="7"><code class="javascript hljs" data-noescape="data-noescape">bar("Tomek");<span class="fragment fade-out display-none" data-fragment-index="8">// ???</span><span class="fragment fade-in error" data-fragment-index="8">// Cannot access 'bar' before initialization</span> 
-const bar = name => `Cześć ${name}!`;</code></pre>
-      </section>
       <section id="conditions">
         <h4>Warunki logiczne</h4>
         <pre class="fragment fade-in margined" data-fragment-index="1"><code class="javascript hljs" data-noescape="data-noescape">const condition = true;
@@ -196,35 +127,6 @@ if(condition) {
 }</code></pre>
         <pre class="fragment fade-in margined" data-fragment-index="2"><code class="javascript hljs" data-noescape="data-noescape">//Inline if
 const value = true ? 5 : 2;</code></pre>
-      </section>
-      <section>
-        <h4>Operatory logiczne</h4>
-        <div class="types-grid">
-          <div class="type fragment fade-right" data-fragment-index="1">AND</div>
-          <div class="type-example fragment fade-right" data-fragment-index="1">
-            <pre><code class="javascript hljs" data-noescape="data-noescape">const value = true && true ? 5 : 1;<span class="fragment fade-out display-none" data-fragment-index="2">// ???</span><span class="fragment fade-in" data-fragment-index="2">// 5</span>
-const val = true && "Test";<span class="fragment fade-out display-none" data-fragment-index="3">// ???</span><span class="fragment fade-in" data-fragment-index="3">// "Test"</span></code></pre>
-          </div>
-          <div class="type fragment fade-right" data-fragment-index="4">OR</div>
-          <div class="type-example fragment fade-right" data-fragment-index="4">
-            <pre><code class="javascript hljs" data-noescape="data-noescape">const value = false || false ? 5 : 1;<span class="fragment fade-out display-none" data-fragment-index="5">// ???</span><span class="fragment fade-in" data-fragment-index="5">// 1</span>
-const val = true || "Test";<span class="fragment fade-out display-none" data-fragment-index="6">// ???</span><span class="fragment fade-in" data-fragment-index="6">// true</span></code></pre>
-          </div>
-          <div class="type fragment fade-right" data-fragment-index="7">!</div>
-          <div class="type-example fragment fade-right" data-fragment-index="7">
-            <pre><code class="javascript hljs" data-noescape="data-noescape">const value = !(false || false) ? 5 : 1;<span class="fragment fade-out display-none" data-fragment-index="8">// ???</span><span class="fragment fade-in" data-fragment-index="8">// 5</span></code></pre>
-          </div>
-          <div class="type fragment fade-right" data-fragment-index="9">!!</div>
-          <div class="type-example fragment fade-right" data-fragment-index="9">
-            <pre><code class="javascript hljs" data-noescape="data-noescape">let value = !!"Elo";<span class="fragment fade-out display-none" data-fragment-index="10">// ???</span><span class="fragment fade-in" data-fragment-index="10">// true</span>
-let val = !!"";<span class="fragment fade-out display-none" data-fragment-index="11">// ???</span><span class="fragment fade-in" data-fragment-index="11">// false</span></code></pre>
-          </div>
-          <div class="type fragment fade-right" data-fragment-index="12">< lub ></div>
-          <div class="type-example fragment fade-right" data-fragment-index="12">
-            <pre><code class="javascript hljs" data-noescape="data-noescape">let value = 5 > 1;<span class="fragment fade-out display-none" data-fragment-index="13">// ???</span><span class="fragment fade-in" data-fragment-index="13">// true</span>
-let val = "JavaScript" > "Kotlin";<span class="fragment fade-out display-none" data-fragment-index="14">// ???</span><span class="fragment fade-in" data-fragment-index="14">// false</span></code></pre>
-          </div>
-        </div>
       </section>
       <section id="falsy">
         <h4>Falsy values</h4>
@@ -238,17 +140,63 @@ let val = "JavaScript" > "Kotlin";<span class="fragment fade-out display-none" d
         </ol>
       </section>
       <section id="falsy">
+        <h4>Truthy values</h4>
+        <ul>
+          <li class="fragment fade-right">Wszystkie pozostałe, w szczególności:</li>
+          <ul>
+            <li class="fragment fade-right">pusty obiekt {}</li>
+            <li class="fragment fade-right">pusta tablica []	</li>
+          </ul>
+        </ul>
+      </section>
+      <section id="falsy">
         <h4>== vs ===</h4>
         <p class="fragment fade-right" data-fragment-index="1">
            == - porównujemy wartość</p>
         <p class="fragment fade-right" data-fragment-index="2">
            === - porównujemy wartość i typ</p><span class="fragment fade-right" data-fragment-index="3">Powinno się stosować <span class="fragment fade-out display-none" data-fragment-index="4">???</span><span class="fragment fade-right" data-fragment-index="4">===</span></span>
       </section>
+      <section>
+        <h4>Operatory logiczne</h4>
+        <div class="types-grid">
+          <div class="type fragment fade-right" data-fragment-index="1">AND</div>
+          <div class="type-example fragment fade-right" data-fragment-index="1">
+            <pre><code class="javascript hljs" data-noescape="data-noescape">const val = true && "Test";<span class="fragment fade-out display-none" data-fragment-index="2">// ???</span><span class="fragment fade-in" data-fragment-index="2">// "Test"</span></code></pre>
+          </div>
+          <div class="type fragment fade-right" data-fragment-index="3">OR</div>
+          <div class="type-example fragment fade-right" data-fragment-index="3">
+            <pre><code class="javascript hljs" data-noescape="data-noescape">const val = true || "Test";<span class="fragment fade-out display-none" data-fragment-index="4">// ???</span><span class="fragment fade-in" data-fragment-index="4">// true</span></code></pre>
+          </div>
+          <div class="type fragment fade-right" data-fragment-index="5">!</div>
+          <div class="type-example fragment fade-right" data-fragment-index="5">
+            <pre><code class="javascript hljs" data-noescape="data-noescape">const value = !false;<span class="fragment fade-out display-none" data-fragment-index="6">// ???</span><span class="fragment fade-in" data-fragment-index="6">// true</span>
+let val = !"";<span class="fragment fade-out display-none" data-fragment-index="7">// ???</span><span class="fragment fade-in" data-fragment-index="7">// true</span></code></pre>
+          </div>
+          <div class="type fragment fade-right" data-fragment-index="9">!!</div>
+          <div class="type-example fragment fade-right" data-fragment-index="9">
+            <pre><code class="javascript hljs" data-noescape="data-noescape">let value = !!"Elo";<span class="fragment fade-out display-none" data-fragment-index="10">// ???</span><span class="fragment fade-in" data-fragment-index="10">// true</span>
+let val = !!"";<span class="fragment fade-out display-none" data-fragment-index="11">// ???</span><span class="fragment fade-in" data-fragment-index="11">// false</span></code></pre>
+          </div>
+          <div class="type fragment fade-right" data-fragment-index="12">< ></div>
+          <div class="type-example fragment fade-right" data-fragment-index="12">
+            <pre><code class="javascript hljs" data-noescape="data-noescape">let value = 5 > 1;<span class="fragment fade-out display-none" data-fragment-index="13">// ???</span><span class="fragment fade-in" data-fragment-index="13">// true</span></code></pre>
+          </div>
+        </div>
+      </section>
       <section id="objects">
         <h4>Obiekty</h4>
+        <pre class="fragment fade-right"><code class="javascript hljs">const person = {
+	name: "John",
+	age: 17,
+	sayHello: () => console.log("Hi! I'm John.")
+}</code></pre>
         <p class="fragment fade-right">W JavaScript 
-          <u>prawie</u> wszystko jest obiektem!
+          <u>prawie</u> wszystko jest obiektem.
         </p>
+        <p class="fragment fade-right">(prawie, bo mamy typy prymitiwne które już znamy)</p>
+      </section>
+      <section id="objects">
+        <h4>Obiekty</h4>
         <pre class="fragment fade-right"><code class="javascript hljs">function show() {
 	console.log(this.brand + " koloru " + this.color);
 }
@@ -267,6 +215,7 @@ const car2 = {
  
 car1.showText(); //"Mercedes koloru czerwony"
 car2.showText(); //"BMW koloru czarny"</code></pre>
+        <p class="fragment fade-right">"this" zależy od sposobu wywołania funkcji, a nie od sposobu jej stworzenia!</p>
       </section>
       <section>
         <h4>Dostęp do pól obiektów.</h4>
@@ -275,13 +224,13 @@ car2.showText(); //"BMW koloru czarny"</code></pre>
 	color: "czerwony",
 	showText: show
 }
-            <div class="fragment fade-in" data-fragment-index="1">// Sprawdzanie po polu
+            <div class="fragment fade-in" data-fragment-index="1">// Pobieranie właściwości
 car.brand; // "Mercedes"
             </div>
-            <div class="fragment fade-in" data-fragment-index="2">// Dodawanie pola
+            <div class="fragment fade-in" data-fragment-index="2">// Dodawanie właściwości
 car.year = 2002;
             </div>
-            <div class="fragment fade-in" data-fragment-index="3">// Pobieranie pola po nazwie w string
+            <div class="fragment fade-in" data-fragment-index="3">// Pobieranie właściwości składnią tablicową
 car['year']; // 2002
             </div></code></pre>
       </section>
@@ -338,18 +287,14 @@ Object.values(car);<span class="fragment fade-out display-none" data-fragment-in
       </section>
       <section id="arrys">
         <h4>Operacje na tablicach</h4>
-        <p>Obiekt typu Array posiada w swoim prototypie wiele metod przydatych do wykonywnia opreacji na danych.</p>
-        <p>Każda taka funkcja w domyśle przyjmuje, wspomniany już callback, który może posiadać do trzech argumentów:</p>
-        <ol>
-          <li>Aktualnie przetwarzana wartość</li>
-          <li>Index na któym znajduje się wartość</li>
-          <li>Tablica na której wykonywana jest operacja</li>
-        </ol>
+        <p>Obiekt typu Array posiada w swoim prototypie wiele metod przydatych do wykonywnia operacji na danych.</p>
+        <p>Każda taka funkcja przyjmuje callback, który jest wywoływany dla każdego elementu talbicy.</p>
+        <p>Operacje te zwracają nową tablicę i nie modyfikują istniejącej.</p>
       </section>
       <section>
         <h4>Podstawowe funckje na tablicach</h4>
         <pre class="fragment fade-in small-pre margined" data-fragment-index="1"><code class="javascript hljs" data-noescape="data-noescape">const data = [1,2,3,4];
-data.forEach((val,index) => consol.log(`Value ${val}, is on index ${index}));</code></pre>
+data.forEach((val,index) => console.log(`Value ${val}, is on index ${index}));</code></pre>
         <pre class="fragment fade-in small-pre margined" data-fragment-index="2"><code class="javascript hljs" data-noescape="data-noescape">const data = [1,2,3,4];
 data.map((val,index) => val * index);<span class="fragment fade-out display-none" data-fragment-index="3">// ???</span><span class="fragment fade-in" data-fragment-index="3">// [0, 2, 6, 12]</span></code></pre>
         <pre class="fragment fade-in small-pre margined" data-fragment-index="4"><code class="javascript hljs" data-noescape="data-noescape">const data = [{}, '', 15, null];
@@ -378,8 +323,21 @@ const test = [4,5,6];
 const [x, y] = position;<span class="fragment fade-out display-none" data-fragment-index="4">// ???</span><span class="fragment fade-in" data-fragment-index="4">//  x = 52; y = 35</span></code></pre>
       </section>
       <section id="scope">
-        <p class="fragment fade-right">Scope (Zakres) w JavaScript definiuje, do których zamiennych mamy dostęp.</p>
-        <p class="fragment fade-right">Istnieją dwa rodzaje takiego zakresu: globalny oraz lokalny.</p>
+        <h4>Scope</h4>
+        <p class="fragment fade-right">Definiuje, do których zamiennych mamy dostęp.</p>
+        <p class="fragment fade-right">Rozróżniamy scope blokowy, funkcyjny i globalny.</p>
+        <pre class="fragment fade-right"><code class="javascript hljs">// scope globalny
+function fn(name) {
+	// scope funkcyjny
+}
+if (true) {
+  // scope blokowy
+}</code></pre>
+        <p class="fragment fade-right">var ma scope funkcyjny</p>
+        <p class="fragment fade-right">let i const ma scope blokowy</p>
+      </section>
+      <section id="scope">
+        <h4>Scope</h4>
         <pre class="fragment fade-right"><code class="javascript hljs">const name = "John";
 function fn(name) {
 	console.log(name); //undefined
@@ -390,46 +348,92 @@ fn();
 console.log(test); // test is not defined</code></pre>
       </section>
       <section id="clousers">
-        <p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures">Clousers</a>(domknięcia) jest
-          kombinacją funkcji spakowanej razem (zawartej) z odniesieniami do jej otaczającego
-          stanu (środowiska leksykalnego). Innymi słowy, domknięcie daje dostęp do zakresu funkcji zewnętrznej z funkcji
-          wewnętrznej. W JavaScript, zamknięcia są tworzone za każdym razem, gdy funkcja jest tworzona, w czasie tworzenia
-          funkcji.
-        </p>
+        <h4><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures">Clousers</a></h4>
+        <p>Domknięcie daje dostęp z funkcji wewnętrznej do zasięgu funkcji zewnętrznej.</p>
+      </section>
+      <section id="clousers">
+        <h4>Clousers</h4>
+        <pre class="fragment fade-right"><code class="javascript hljs">function makeFunc() {
+	var name = "Mozilla";
+	function displayName() {
+		alert(name);
+	}
+	return displayName;
+}
+ 
+var myFunc = makeFunc();</code>myFunc();</pre>
       </section>
       <section id="hoisting">
-        <p><a href="https://developer.mozilla.org/pl/docs/Glossary/Hoisting">Hoisting</a> to mechanizm w języku JavaScript, który polega na wyszukiwaniu przez silnik JS wszelkich deklaracji zmiennych i funkcji w danym bloku kodu lub funkcji. Nastepnie przenosi deklaracje na początek tego bloku lub funkcji.</p>
+        <p><a href="https://developer.mozilla.org/pl/docs/Glossary/Hoisting">Hoisting</a> to mechanizm w języku JavaScript, polegający na deklarowaniu zmiennych i funkcji przed właściwym wykonaniem kodu.</p>
         <pre class="fragment fade-right"><code class="javascript hljs">function fn() {
 	console.log(test); //undefined
 	var test = "Test";
 	console.log(test); // "Test"
 }</code></pre>
+      </section>
+      <section id="hoisting">
+        <p class="fragment fade-right">Hoisting działa dla var i funkcji</p>
+        <p class="fragment fade-right">var przed przypisaniem wartości będzie zawsze równy undefined</p>
+        <p class="fragment fade-right">funkcja jest gotowa do wywołania</p>
         <p class="fragment fade-right">Hoisting nie działa w przypadku let oraz const.</p>
         <p class="fragment fade-right">Dla let i const dostaniemy Reference Error.</p>
       </section>
       <section id="promises">
+        <h4>Natura języka Javascript</h4>
+        <p>
+           Javascript jest jednowątkowy...
+           
+        </p>
+        <p>  ale asynchroniczny!</p>
+      </section>
+      <section id="promises">
         <h4> <a href="https://developer.mozilla.org/pl/docs/Web/JavaScript/Reference/Global_Objects/Promise" target="_blank">Promise</a></h4>
         <p>
-           Pozwala na obsłużenie z ewentualnym sukcesem lub porażką asynchronicznej akcji. 
-          Pozwala to metodom asynchronicznym zwracać wartości takie jak metody synchroniczne, 
-          zamiast natychmiastowego zwracania wartości końcowej, metoda asynchroniczna zwraca 
-          obietnicę dostarczenia wartości w pewnym momencie w przyszłości.
-        </p>
+           Promise jest specjalnym obiektem reprezentującym wynik asynchronicznej operacji (np. zapytania do bazy danych).</p>
+        <p>Można go rozumieć jako obietnicę otrzymania wyniku po zakończeniu asynchronicznej operacji.</p>
       </section>
       <section> 
-        <pre class="fragment fade-right"><code class="javascript hljs">const promise = new Promise((resolve, reject) => {
-   setTimeout(function(){
-      resolve("Success!");
-   }, 250);
-});</code></pre>
-        <pre class="fragment fade-right"><code class="javascript hljs">promise.then((msg) => {
+        <pre class="fragment fade-right"><code class="javascript hljs">function backendCall() {
+   const promise = new Promise((resolve, reject) => {
+       setTimeout(function(){
+           resolve("Success!");
+       }, 250);
+   });
+   return promise;
+}</code></pre>
+      </section>
+      <section> 
+        <pre class="fragment fade-right"><code class="javascript hljs">function backendCall() {
+   const promise = new Promise((resolve, reject) => {
+       setTimeout(function(){
+           resolve("Success!");
+       }, 250);
+   });
+   return promise;
+}</code></pre>
+        <pre class="fragment fade-right"><code class="javascript hljs">backendCall().then((msg) => {
+  console.log(msg); // "Success!" 
+}).catch((err) => {
+  console.log(err);    
+})</code></pre>
+      </section>
+      <section> 
+        <pre class="fragment fade-right"><code class="javascript hljs">function backendCall() {
+   const promise = new Promise((resolve, reject) => {
+       setTimeout(function(){
+           resolve("Success!");
+       }, 250);
+   });
+   return promise;
+}</code></pre>
+        <pre class="fragment fade-right"><code class="javascript hljs">backendCall().then((msg) => {
   console.log(msg); // "Success!" 
 }).catch((err) => {
   console.log(err);    
 })</code></pre>
         <pre class="fragment fade-right"><code class="javascript hljs">const asyncFn = async () => {
   try{
-      const result = await promise;
+      const result = await backendCall();
       console.log(result); // "Success!"
   } catch(e) {
       console.log(e);
@@ -438,12 +442,22 @@ console.log(test); // test is not defined</code></pre>
       </section>
       <section>
         <h4> <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch">fetch</a></h4>
-        <p> <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch">Fetch API </a>jest interfejsem pozwalającym na asynchroniczne pobieranie zasobów.
-          Fetch API powstało, aby uprościć sposób komunikacji z serwerem, a dzięki wykorzystaniu obietnic.
-        </p>
+        <p> <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch">Fetch API </a>jest interfejsem pozwalającym na asynchroniczne pobieranie zasobów.</p>
         <pre class="fragment fade-right"><code class="javascript hljs">fetch('https://example.com/posts/1')
   .then(response => response.json())
   .then(json => console.log(json));</code></pre>
+      </section>
+      <section>
+        <h4> <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch">fetch</a></h4>
+        <p> <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch">Fetch API </a>jest interfejsem pozwalającym na asynchroniczne pobieranie zasobów.</p>
+        <pre class="fragment fade-right"><code class="javascript hljs">const asyncFn = async () => {
+  try{
+      const result = await fetch('https://example.com/posts/1');
+      console.log(result.json()); // "Success!"
+  } catch(e) {
+      console.log(e);
+  }
+}</code></pre>
       </section>
       <section>
         <pre><code class="javascript hljs">const data = {
@@ -463,16 +477,33 @@ fetch('https://example.com/posts', options)
       </section>
       <section>
         <h4>Jak skomunikować ze sobą pliki?</h4>
-        <pre class="fragment fade-right"><code class="javascript hljs">export const getName = () => {};
+        <p>Składnia import / export</p>
+        <pre class="fragment fade-right"><code class="javascript hljs">// component.js
+export const getName = () => {};
+export const YEAR = "2020"</code></pre>
+        <pre class="fragment fade-right"><code class="javascript hljs">// main.js
+import { getName, YEAR } from "component";</code></pre>
+      </section>
+      <section>
+        <h4>default export</h4>
+        <p>tylko jeden na plik</p>
+        <pre class="fragment fade-right"><code class="javascript hljs">// component.js
+const init = () => {};
+export defult init;</code></pre>
+        <pre class="fragment fade-right"><code class="javascript hljs"> 
+// main.js
+import init from "component";</code></pre>
+      </section>
+      <section>
+        <h4>Połączenie exportów</h4>
+        <pre class="fragment fade-right"><code class="javascript hljs">// component.js
+export const getName = () => {};
 export const YEAR = "2020"
 const init = () => {};
 export defult init;</code></pre>
-        <pre class="fragment fade-right"><code class="javascript hljs">import { getName } from "file";
-import { YEAR } from "other";
-import { getName, YEAR } from "file";
- 
-import init from "file";
-import init, { getName, YEAR } from "file";</code></pre>
+        <pre class="fragment fade-right"><code class="javascript hljs"> 
+// main.js
+import init, { getName, YEAR } from "component";</code></pre>
       </section>
     </section>
     <section id="browser">
@@ -561,8 +592,8 @@ submitBtn.addEventListener('click', () => {
       <section id="project-configuration">
         <h4>Konfiguracja projektu</h4>
         <ol>
-          <li><span>Pobieramy i instalujemy <a href="https://nodejs.org/en/">Node.js</a>ze strony głównej lub za
-              pomoca<a href="https://github.com/coreybutler/nvm-windows">NVM</a></span></li>
+          <li><span>Pobieramy i instalujemy <a href="https://nodejs.org/en/">Node.js</a> ze strony głównej lub za
+              pomoca<a href="https://github.com/coreybutler/nvm-windows"> NVM</a></span></li>
           <li><span>Pobieramy template projektu z <a href="https://github.com/Obryko/js-jsk-template">repo</a>,
               jako zip.</span></li>
           <li><span>Wypakowujemy w miejscu projektu i wpisujemy w konsoli <code class="bash hljs custom-bash">npm install</code>.</span></li>
@@ -592,10 +623,6 @@ submitBtn.addEventListener('click', () => {
           <li><a href="https://www.youtube.com/channel/UCb2Y3vMeD6N4WDt5Acw7Arw">Przeprogramowani - YT</a></li>
           <li><a href="https://www.youtube.com/channel/UCsBjURrPoezykLs9EqgamOA">Fireship - YT</a></li>
         </ul>
-      </section>
-      <section>
-        <h4> <a href="https://obryko.github.io/js-jsk-slides">https://obryko.github.io/js-jsk-slides</a></h4><span>
-           Uwagi do prezentacji oraz feedback proszę wysyłać na <a href="mailto:kacper.obrycki@capgemini.com">kacper.obrycki@capgemini.com</a>. Każda uwaga pomoże tej prezentacji i prezenterowi być lepszym w przyszłości ! 😃</span>
       </section>
       <section> 
         <h3>Dziękuję za uwagę 😃</h3>
