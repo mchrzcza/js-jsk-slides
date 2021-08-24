@@ -1,16 +1,41 @@
 section
 		h4 Jak skomunikować ze sobą pliki?
+		p Składnia import / export
 		pre.fragment.fade-right
 			code.javascript.hljs
+				| // component.js
+				| export const getName = () => {};
+				| export const YEAR = "2020"
+		pre.fragment.fade-right
+			code.javascript.hljs
+				| // main.js
+				| import { getName, YEAR } from "component";
+
+section
+		h4 default export
+		p tylko jeden na plik
+		pre.fragment.fade-right
+			code.javascript.hljs
+				| // component.js
+				| const init = () => {};
+				| export defult init;
+		pre.fragment.fade-right
+			code.javascript.hljs
+				| 
+				| // main.js
+				| import init from "component";
+
+section
+		h4 Połączenie exportów
+		pre.fragment.fade-right
+			code.javascript.hljs
+				| // component.js
 				| export const getName = () => {};
 				| export const YEAR = "2020"
 				| const init = () => {};
 				| export defult init;
 		pre.fragment.fade-right
 			code.javascript.hljs
-				| import { getName } from "file";
-				| import { YEAR } from "other";
-				| import { getName, YEAR } from "file";
 				| 
-				| import init from "file";
-				| import init, { getName, YEAR } from "file";
+				| // main.js
+				| import init, { getName, YEAR } from "component";

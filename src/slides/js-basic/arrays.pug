@@ -1,17 +1,14 @@
 section#arrys
 	h4 Operacje na tablicach
-	p Obiekt typu Array posiada w swoim prototypie wiele metod przydatych do wykonywnia opreacji na danych.
-	p Każda taka funkcja w domyśle przyjmuje, wspomniany już callback, który może posiadać do trzech argumentów:
-	ol
-		li Aktualnie przetwarzana wartość
-		li Index na któym znajduje się wartość
-		li Tablica na której wykonywana jest operacja
+	p Obiekt typu Array posiada w swoim prototypie wiele metod przydatych do wykonywnia operacji na danych.
+	p Każda taka funkcja przyjmuje callback, który jest wywoływany dla każdego elementu talbicy.
+	p Operacje te zwracają nową tablicę i nie modyfikują istniejącej.
 section
 	h4 Podstawowe funckje na tablicach
 	pre.fragment.fade-in.small-pre.margined(data-fragment-index='1')
 		code.javascript.hljs(data-noescape)
 			| const data = [1,2,3,4];
-			| data.forEach((val,index) => consol.log(`Value ${val}, is on index ${index}));
+			| data.forEach((val,index) => console.log(`Value ${val}, is on index ${index}));
 	pre.fragment.fade-in.small-pre.margined(data-fragment-index='2')
 		code.javascript.hljs(data-noescape)
 			| const data = [1,2,3,4];

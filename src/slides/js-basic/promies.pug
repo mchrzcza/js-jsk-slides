@@ -1,22 +1,59 @@
 section#promises
+    h4 Natura języka Javascript
+    p 
+        |Javascript jest jednowątkowy...
+        | 
+    p   ale asynchroniczny!
+section#promises
     h4 
         a(href="https://developer.mozilla.org/pl/docs/Web/JavaScript/Reference/Global_Objects/Promise", target="_blank") Promise
     p 
-        |Pozwala na obsłużenie z ewentualnym sukcesem lub porażką asynchronicznej akcji. 
-        |Pozwala to metodom asynchronicznym zwracać wartości takie jak metody synchroniczne, 
-        |zamiast natychmiastowego zwracania wartości końcowej, metoda asynchroniczna zwraca 
-        |obietnicę dostarczenia wartości w pewnym momencie w przyszłości.
+        |Promise jest specjalnym obiektem reprezentującym wynik asynchronicznej operacji (np. zapytania do bazy danych).
+    p
+        |Można go rozumieć jako obietnicę otrzymania wyniku po zakończeniu asynchronicznej operacji.
 section 
     pre.fragment.fade-right
         code.javascript.hljs
-            |const promise = new Promise((resolve, reject) => {
-            |    setTimeout(function(){
-            |       resolve("Success!");
-            |    }, 250);
-            |});
+            |function backendCall() {
+            |    const promise = new Promise((resolve, reject) => {
+            |        setTimeout(function(){
+            |            resolve("Success!");
+            |        }, 250);
+            |    });
+            |    return promise;
+            |}
+section 
     pre.fragment.fade-right
         code.javascript.hljs
-            |promise.then((msg) => {
+            |function backendCall() {
+            |    const promise = new Promise((resolve, reject) => {
+            |        setTimeout(function(){
+            |            resolve("Success!");
+            |        }, 250);
+            |    });
+            |    return promise;
+            |}
+    pre.fragment.fade-right
+        code.javascript.hljs
+            |backendCall().then((msg) => {
+            |   console.log(msg); // "Success!" 
+            |}).catch((err) => {
+            |   console.log(err);    
+            |})
+section 
+    pre.fragment.fade-right
+        code.javascript.hljs
+            |function backendCall() {
+            |    const promise = new Promise((resolve, reject) => {
+            |        setTimeout(function(){
+            |            resolve("Success!");
+            |        }, 250);
+            |    });
+            |    return promise;
+            |}
+    pre.fragment.fade-right
+        code.javascript.hljs
+            |backendCall().then((msg) => {
             |   console.log(msg); // "Success!" 
             |}).catch((err) => {
             |   console.log(err);    
@@ -25,7 +62,7 @@ section
         code.javascript.hljs
             |const asyncFn = async () => {
             |   try{
-            |       const result = await promise;
+            |       const result = await backendCall();
             |       console.log(result); // "Success!"
             |   } catch(e) {
             |       console.log(e);
@@ -37,12 +74,27 @@ section
     p 
         a(href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch") Fetch API 
         | jest interfejsem pozwalającym na asynchroniczne pobieranie zasobów.
-        | Fetch API powstało, aby uprościć sposób komunikacji z serwerem, a dzięki wykorzystaniu obietnic.
     pre.fragment.fade-right
         code.javascript.hljs
             |fetch('https://example.com/posts/1')
             |   .then(response => response.json())
             |   .then(json => console.log(json));
+section
+    h4 
+        a(href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch") fetch
+    p 
+        a(href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch") Fetch API 
+        | jest interfejsem pozwalającym na asynchroniczne pobieranie zasobów.
+    pre.fragment.fade-right
+        code.javascript.hljs
+            |const asyncFn = async () => {
+            |   try{
+            |       const result = await fetch('https://example.com/posts/1');
+            |       console.log(result.json()); // "Success!"
+            |   } catch(e) {
+            |       console.log(e);
+            |   }
+            |}
 section
     pre
         code.javascript.hljs

@@ -1,8 +1,19 @@
 section#objects
 	h4 Obiekty
+	pre.fragment.fade-right
+		code.javascript.hljs
+			| const person = {
+			| 	name: "John",
+			| 	age: 17,
+			| 	sayHello: () => console.log("Hi! I'm John.")
+			| }
 	p.fragment.fade-right W JavaScript 
 		u prawie
-		|  wszystko jest obiektem!
+		|  wszystko jest obiektem.
+	p.fragment.fade-right (prawie, bo mamy typy prymitiwne które już znamy)
+
+section#objects
+	h4 Obiekty
 	pre.fragment.fade-right
 		code.javascript.hljs
 			| function show() {
@@ -23,6 +34,7 @@ section#objects
 			| 
 			| car1.showText(); //"Mercedes koloru czerwony"
 			| car2.showText(); //"BMW koloru czarny"
+	p.fragment.fade-right "this" zależy od sposobu wywołania funkcji, a nie od sposobu jej stworzenia!
 section
 	h4 Dostęp do pól obiektów.
 	pre.fragment.fade-right(data-fragment-index='0')
@@ -33,13 +45,13 @@ section
 			| 	showText: show
 			| }
 			.fragment.fade-in(data-fragment-index='1')
-				| // Sprawdzanie po polu
+				| // Pobieranie właściwości
 				| car.brand; // "Mercedes"
 			.fragment.fade-in(data-fragment-index='2')
-				| // Dodawanie pola
+				| // Dodawanie właściwości
 				| car.year = 2002;
 			.fragment.fade-in(data-fragment-index='3')
-				| // Pobieranie pola po nazwie w string
+				| // Pobieranie właściwości składnią tablicową
 				| car['year']; // 2002
 section
 	h4 Iteracja po obiekcie

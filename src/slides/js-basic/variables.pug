@@ -1,19 +1,23 @@
 section#variables
 	h4 Zmienne
-	pre.fragment.fade-right
+	pre.fragment.fade-right(data-fragment-index='1')
 		code.javascript.hljs
 			| var bad = [];
 			| bad = "Test";
 			| var bad = 5;
-	pre.fragment.fade-right
+	pre.fragment.fade-right(data-fragment-index='2')
 		code.javascript.hljs
+			|
+			|
 			| const foo = "";
 			| foo = 5; // Error: Assign to constant variable;
-	pre.fragment.fade-right
+	pre.fragment.fade-right(data-fragment-index='3')
 		code.javascript.hljs
+			|
+			|
 			| let bar = 1;
 			| bar = 5;
-			| let bat = 4; // Error
+			| let bar = 4; // Error
 section#types
 	h4
 		a(href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures', target='_blank') Typy danych
@@ -60,8 +64,8 @@ section#types
 				code.javascript.hljs(data-noescape)
 					| let value = null;
 					| console.log(typeof value); //
-					span.fragment.fade-out.display-none(data-fragment-index='7') ???
-					span.fragment.fade-in(data-fragment-index='7') object
+					span.fragment.fade-out.display-none(data-fragment-index='7')  ???
+					span.fragment.fade-in(data-fragment-index='7')  object
 		.type.fragment.fade-right(data-fragment-index='8')
 			a(href='https://developer.mozilla.org/pl/docs/Web/JavaScript/Referencje/Obiekty/Symbol', target='_blank') symbol
 		.type-example.fragment.fade-right(data-fragment-index='8')

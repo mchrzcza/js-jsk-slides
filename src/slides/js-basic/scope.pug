@@ -1,6 +1,20 @@
 section#scope
-	p.fragment.fade-right Scope (Zakres) w JavaScript definiuje, do których zamiennych mamy dostęp.
-	p.fragment.fade-right Istnieją dwa rodzaje takiego zakresu: globalny oraz lokalny.
+	h4 Scope
+	p.fragment.fade-right Definiuje, do których zamiennych mamy dostęp.
+	p.fragment.fade-right Rozróżniamy scope blokowy, funkcyjny i globalny.
+	pre.fragment.fade-right
+		code.javascript.hljs
+			| // scope globalny
+			| function fn(name) {
+			| 	// scope funkcyjny
+			| }
+			| if (true) {
+			|   // scope blokowy
+			| }
+	p.fragment.fade-right var ma scope funkcyjny
+	p.fragment.fade-right let i const ma scope blokowy
+section#scope
+	h4 Scope
 	pre.fragment.fade-right
 		code.javascript.hljs
 			| const name = "John";
@@ -12,17 +26,28 @@ section#scope
 			| fn();
 			| console.log(test); // test is not defined
 section#clousers
-	p
+	h4
 		a(href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures') Clousers
-		| (domknięcia) jest
-		| kombinacją funkcji spakowanej razem (zawartej) z odniesieniami do jej otaczającego
-		| stanu (środowiska leksykalnego). Innymi słowy, domknięcie daje dostęp do zakresu funkcji zewnętrznej z funkcji
-		| wewnętrznej. W JavaScript, zamknięcia są tworzone za każdym razem, gdy funkcja jest tworzona, w czasie tworzenia
-		| funkcji.
+		|
+	p Domknięcie daje dostęp z funkcji wewnętrznej do zasięgu funkcji zewnętrznej.
+section#clousers
+	h4 Clousers
+	pre.fragment.fade-right
+		code.javascript.hljs
+			| function makeFunc() {
+			| 	var name = "Mozilla";
+			| 	function displayName() {
+			| 		alert(name);
+			| 	}
+			| 	return displayName;
+			| }
+			| 
+			| var myFunc = makeFunc();
+		| myFunc();
 section#hoisting
 	p
 		a(href='https://developer.mozilla.org/pl/docs/Glossary/Hoisting') Hoisting
-		|  to mechanizm w języku JavaScript, który polega na wyszukiwaniu przez silnik JS wszelkich deklaracji zmiennych i funkcji w danym bloku kodu lub funkcji. Nastepnie przenosi deklaracje na początek tego bloku lub funkcji.
+		|  to mechanizm w języku JavaScript, polegający na deklarowaniu zmiennych i funkcji przed właściwym wykonaniem kodu.
 	pre.fragment.fade-right
 		code.javascript.hljs
 			| function fn() {
@@ -30,5 +55,9 @@ section#hoisting
 			| 	var test = "Test";
 			| 	console.log(test); // "Test"
 			| }
+section#hoisting
+	p.fragment.fade-right Hoisting działa dla var i funkcji
+	p.fragment.fade-right var przed przypisaniem wartości będzie zawsze równy undefined
+	p.fragment.fade-right funkcja jest gotowa do wywołania
 	p.fragment.fade-right Hoisting nie działa w przypadku let oraz const.
 	p.fragment.fade-right Dla let i const dostaniemy Reference Error.

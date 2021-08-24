@@ -12,6 +12,37 @@ section#conditions
 		code.javascript.hljs(data-noescape)
 			| //Inline if
 			| const value = true ? 5 : 2;
+
+section#falsy
+	h4 Falsy values
+	ol
+		li.fragment.fade-right 0
+		li.fragment.fade-right null
+		li.fragment.fade-right undefined
+		li.fragment.fade-right false
+		li.fragment.fade-right NaN
+		li.fragment.fade-right ""
+		
+
+section#falsy
+	h4 Truthy values
+	ul
+		li.fragment.fade-right Wszystkie pozostałe, w szczególności:
+		ul
+			li.fragment.fade-right pusty obiekt {}
+			li.fragment.fade-right pusta tablica []	
+		
+		
+section#falsy
+	h4 == vs ===
+	p.fragment.fade-right(data-fragment-index='1') 
+		| == - porównujemy wartość
+	p.fragment.fade-right(data-fragment-index='2')  
+		| === - porównujemy wartość i typ
+	span.fragment.fade-right(data-fragment-index='3') Powinno się stosować 
+		span.fragment.fade-out.display-none(data-fragment-index='4') ???
+		span.fragment.fade-right(data-fragment-index='4') ===
+
 section
 	h4 Operatory logiczne
 	.types-grid
@@ -20,33 +51,29 @@ section
 		.type-example.fragment.fade-right(data-fragment-index='1')
 			pre
 				code.javascript.hljs(data-noescape)
-					| const value = true && true ? 5 : 1;
-					span.fragment.fade-out.display-none(data-fragment-index='2') // ???
-					span.fragment.fade-in(data-fragment-index='2') // 5
-					|
 					| const val = true && "Test";
-					span.fragment.fade-out.display-none(data-fragment-index='3') // ???
-					span.fragment.fade-in(data-fragment-index='3') // "Test"
-		.type.fragment.fade-right(data-fragment-index='4')
+					span.fragment.fade-out.display-none(data-fragment-index='2') // ???
+					span.fragment.fade-in(data-fragment-index='2') // "Test"
+		.type.fragment.fade-right(data-fragment-index='3')
 			| OR
-		.type-example.fragment.fade-right(data-fragment-index='4')
+		.type-example.fragment.fade-right(data-fragment-index='3')
 			pre
 				code.javascript.hljs(data-noescape)
-					| const value = false || false ? 5 : 1;
-					span.fragment.fade-out.display-none(data-fragment-index='5') // ???
-					span.fragment.fade-in(data-fragment-index='5') // 1
-					|
 					| const val = true || "Test";
+					span.fragment.fade-out.display-none(data-fragment-index='4') // ???
+					span.fragment.fade-in(data-fragment-index='4') // true
+		.type.fragment.fade-right(data-fragment-index='5')
+			| !
+		.type-example.fragment.fade-right(data-fragment-index='5')
+			pre
+				code.javascript.hljs(data-noescape)
+					| const value = !false;
 					span.fragment.fade-out.display-none(data-fragment-index='6') // ???
 					span.fragment.fade-in(data-fragment-index='6') // true
-		.type.fragment.fade-right(data-fragment-index='7')
-			| !
-		.type-example.fragment.fade-right(data-fragment-index='7')
-			pre
-				code.javascript.hljs(data-noescape)
-					| const value = !(false || false) ? 5 : 1;
-					span.fragment.fade-out.display-none(data-fragment-index='8') // ???
-					span.fragment.fade-in(data-fragment-index='8') // 5
+					|
+					| let val = !"";
+					span.fragment.fade-out.display-none(data-fragment-index='7') // ???
+					span.fragment.fade-in(data-fragment-index='7') // true
 		.type.fragment.fade-right(data-fragment-index='9')
 			| !!
 		.type-example.fragment.fade-right(data-fragment-index='9')
@@ -60,32 +87,10 @@ section
 					span.fragment.fade-out.display-none(data-fragment-index='11') // ???
 					span.fragment.fade-in(data-fragment-index='11') // false
 		.type.fragment.fade-right(data-fragment-index='12')
-			| < lub >
+			| < >
 		.type-example.fragment.fade-right(data-fragment-index='12')
 			pre
 				code.javascript.hljs(data-noescape)
 					| let value = 5 > 1;
 					span.fragment.fade-out.display-none(data-fragment-index='13') // ???
 					span.fragment.fade-in(data-fragment-index='13') // true
-					|
-					| let val = "JavaScript" > "Kotlin";
-					span.fragment.fade-out.display-none(data-fragment-index='14') // ???
-					span.fragment.fade-in(data-fragment-index='14') // false
-section#falsy
-	h4 Falsy values
-	ol
-		li.fragment.fade-right 0
-		li.fragment.fade-right null
-		li.fragment.fade-right undefined
-		li.fragment.fade-right false
-		li.fragment.fade-right NaN
-		li.fragment.fade-right ""
-section#falsy
-	h4 == vs ===
-	p.fragment.fade-right(data-fragment-index='1') 
-		| == - porównujemy wartość
-	p.fragment.fade-right(data-fragment-index='2')  
-		| === - porównujemy wartość i typ
-	span.fragment.fade-right(data-fragment-index='3') Powinno się stosować 
-		span.fragment.fade-out.display-none(data-fragment-index='4') ???
-		span.fragment.fade-right(data-fragment-index='4') ===
