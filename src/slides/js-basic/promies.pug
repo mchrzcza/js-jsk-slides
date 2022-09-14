@@ -1,101 +1,122 @@
 section#promises
     h4 Natura języka Javascript
-    p 
+    p
         |Javascript jest jednowątkowy...
-        | 
+        |
     p   ale asynchroniczny!
 section#promises
-    h4 
+    h4
         a(href="https://developer.mozilla.org/pl/docs/Web/JavaScript/Reference/Global_Objects/Promise", target="_blank") Promise
-    p 
+    p
         |Promise jest specjalnym obiektem reprezentującym wynik asynchronicznej operacji (np. zapytania do bazy danych).
     p
         |Można go rozumieć jako obietnicę otrzymania wyniku po zakończeniu asynchronicznej operacji.
-section 
-    pre.fragment.fade-right
-        code.javascript.hljs
-            |function backendCall() {
-            |    const promise = new Promise((resolve, reject) => {
-            |        setTimeout(function(){
-            |            resolve("Success!");
-            |        }, 250);
-            |    });
-            |    return promise;
-            |}
-section 
-    pre.fragment.fade-right
-        code.javascript.hljs
-            |function backendCall() {
-            |    const promise = new Promise((resolve, reject) => {
-            |        setTimeout(function(){
-            |            resolve("Success!");
-            |        }, 250);
-            |    });
-            |    return promise;
-            |}
-    pre.fragment.fade-right
-        code.javascript.hljs
-            |backendCall().then((msg) => {
-            |   console.log(msg); // "Success!" 
-            |}).catch((err) => {
-            |   console.log(err);    
-            |})
-section 
-    pre.fragment.fade-right
-        code.javascript.hljs
-            |function backendCall() {
-            |    const promise = new Promise((resolve, reject) => {
-            |        setTimeout(function(){
-            |            resolve("Success!");
-            |        }, 250);
-            |    });
-            |    return promise;
-            |}
-    pre.fragment.fade-right
-        code.javascript.hljs
-            |backendCall().then((msg) => {
-            |   console.log(msg); // "Success!" 
-            |}).catch((err) => {
-            |   console.log(err);    
-            |})
-    pre.fragment.fade-right
-        code.javascript.hljs
-            |const asyncFn = async () => {
-            |   try{
-            |       const result = await backendCall();
-            |       console.log(result); // "Success!"
-            |   } catch(e) {
-            |       console.log(e);
-            |   }
-            |}
 section
-    h4 
+    h4
         a(href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch") fetch
-    p 
-        a(href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch") Fetch API 
-        | jest interfejsem pozwalającym na asynchroniczne pobieranie zasobów.
+    p
+        a(href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch") Fetch API
+        |  jest interfejsem pozwalającym na asynchroniczne pobieranie zasobów.
+        div Fetch w najprostszym wywołaniu przymuje URL i wywoła na nim zapytanie typu GET.
+    div
+    pre.fragment.fade-right
+        code.javascript.hljs
+            |fetch('https://example.com/posts/1');
+section
+    div Fetch zwraca obiekt typu Promise, czyli obietnicę która w nieokreślonej przyszłości będzie zawierała odpowiedź z serwera.
+    div
+    pre.fragment.fade-right
+        code.javascript.hljs
+            |const promise = fetch('https://example.com/posts/1');
+section
+    div W celu uzyskania odpowiedzi z serwera możemy użyć słowa kluczowego await.
+    p
+    pre.fragment.fade-right
+        code.javascript.hljs
+            | const resultOfPromise = await fetch('https://example.com/posts/1');
+    p
+    div W miejscu użycia słowa kluczowego await kod będzie "czekał" z dalszym wykonywaniem kodu aż serwer zwróci odpowiedź.
+section
+    div Słowa kluczowego await możemy używać tylko w funkcjach asynchronicznych!
+    p
+    pre.fragment.fade-right
+        code.javascript.hljs
+            | async function asynchronousFunction() {
+            |   const resultOfPromise = await fetch('https://example.com/posts/1');
+            | }
+section
+    div Wynikiem promisa nie jest bezpośrenio odpowiedź serwera, ponieważ jest ona zapakowana w specjalny obiekt.
+    p
+    div Jedną z metod tego obiektu jest metoda json(), która dopiero dostarczy nam dane które zwrócił serwer.
+section
+    div Metoda json() jest również asynchroniczna (ponieważ może być czasochłonna).
+    p
+    pre.fragment.fade-right
+        code.javascript.hljs
+            | async function asynchronousFunction() {
+            |   const resultOfPromise = await fetch('https://example.com/posts/1');
+            |   const resultOfRequest = await resultOfPromise.json();
+            |   consle.log(resultOfRequest);
+            | }
+section
+    div Wszystko co zwracamy w funkcjach asynchronicznych zostanie automatycznie zapakowane w Promise.
+section
+    div Aby obsłużyć wynik asynchronicznej funkcji musimy obłużyć Promise, a więc znowu możemy zrobić to tylko w funkcji asynchronicznej.
+    p
+    pre.fragment.fade-right
+        code.javascript.hljs
+            | async function fetchData() {
+            |   const resultOfPromise = await fetch('https://example.com/posts/1');
+            |   const resultOfRequest = await resultOfPromise.json();
+            |   return resultOfRequest;
+            | }
+            |
+            | async function anotherAsynchronousFunction() {
+            |   const data = await fetchData();
+            |   consle.log(data);
+            | }
+section
+    div Obsługa błedów - np. Internal Server Error w przypadku buga na backendzie
+    p
+    pre.fragment.fade-right
+        code.javascript.hljs
+            | async function fetchData() {
+            |   try {
+            |     const resultOfPromise = await fetch('https://example.com/posts/1');
+            |     const resultOfRequest = await resultOfPromise.json();
+            |     return resultOfRequest;
+            |   } catch (e) {
+            |     console.log("Error occurred: ", e);
+            |     return {};
+            |   }
+            | }
+            |
+            | async function anotherAsynchronousFunction() {
+            |   const data = await fetchData();
+            |   consle.log(data);
+            | }
+section
+    h4 Obsługa promisa w starszy sposób
     pre.fragment.fade-right
         code.javascript.hljs
             |fetch('https://example.com/posts/1')
             |   .then(response => response.json())
             |   .then(json => console.log(json));
+            |   .catch(error => consle.log(error));
 section
-    h4 
-        a(href="https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch") fetch
-    p 
-        a(href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch") Fetch API 
-        | jest interfejsem pozwalającym na asynchroniczne pobieranie zasobów.
+    h4 Tworzenie Promise'a
     pre.fragment.fade-right
         code.javascript.hljs
-            |const asyncFn = async () => {
-            |   try{
-            |       const result = await fetch('https://example.com/posts/1');
-            |       console.log(result.json()); // "Success!"
-            |   } catch(e) {
-            |       console.log(e);
-            |   }
+            |function backendCall() {
+            |    const promise = new Promise((resolve, reject) => {
+            |        setTimeout(function(){
+            |            resolve("Success!");
+            |        }, 250);
+            |    });
+            |    return promise;
             |}
 section
+    h4 Zapytanie typu POST
     pre
         code.javascript.hljs
             |const data = {
@@ -110,5 +131,3 @@ section
             |   }
             |};
             |fetch('https://example.com/posts', options)
-            |   .then(response => response.json())
-            |   .then(json => console.log(json));
