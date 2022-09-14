@@ -407,7 +407,7 @@ var returnedFunction = functionFactory();
 returnedFunction();</code></pre>
       </section>
       <section id="hoisting">
-        <p><a href="https://developer.mozilla.org/pl/docs/Glossary/Hoisting">Hoisting</a> to mechanizm w języku JavaScript, polegający na deklarowaniu zmiennych i funkcji przed właściwym wykonaniem kodu.</p>
+        <p><a href="https://developer.mozilla.org/en-US/docs/Glossary/Hoisting">Hoisting</a> Hoisting to proces, którego efektem jest "wyciąganie" deklaracji funkcji, zmiennych i class na samą górę scope'u, przed wykonaniem kodu.</p>
         <pre class="fragment fade-right"><code class="javascript hljs">function fn() {
 	console.log(test); //undefined
 	var test = "Test";
@@ -415,11 +415,10 @@ returnedFunction();</code></pre>
 }</code></pre>
       </section>
       <section id="hoisting">
-        <p class="fragment fade-right">Hoisting działa dla var i funkcji</p>
         <p class="fragment fade-right">var przed przypisaniem wartości będzie zawsze równy undefined</p>
         <p class="fragment fade-right">funkcja jest gotowa do wywołania</p>
-        <p class="fragment fade-right">Hoisting nie działa w przypadku let oraz const.</p>
-        <p class="fragment fade-right">Dla let i const dostaniemy Reference Error.</p>
+        <p class="fragment fade-right">funkcja jest gotowa do użycia</p>
+        <p class="fragment fade-right">przy próbie wykorzystania let i const dostaniemy Reference Error</p>
       </section>
       <section id="promises">
         <h4>Natura języka Javascript</h4>
