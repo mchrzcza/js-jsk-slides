@@ -357,20 +357,54 @@ fn();
 console.log(test); // test is not defined</code></pre>
       </section>
       <section id="clousers">
+        <h4>Zwracanie funkcji z funkcji</h4>
+        <pre class="fragment fade-right"><code class="javascript hljs">function giveMeFunction() {
+	function sayHello() {
+		console.log("Hello");
+	}
+	return sayHello;
+}
+ 
+var returnedFunction = giveMeFunction();
+returnedFunction();			</code></pre>
+      </section>
+      <section id="clousers">
+        <h4>Zwracanie funkcji z funkcji</h4>
+        <pre class="fragment fade-right"><code class="javascript hljs">function giveMeFunction() {
+	return function() {
+		console.log("Hello");
+	}
+}
+ 
+var returnedFunction = giveMeFunction();
+returnedFunction();			</code></pre>
+      </section>
+      <section id="clousers">
+        <h4>Zwracanie funkcji z funkcji</h4>
+        <pre class="fragment fade-right"><code class="javascript hljs">function giveMeFunction() {
+	return () => console.log("Hello");
+}
+ 
+var returnedFunction = giveMeFunction();
+returnedFunction();</code></pre>
+      </section>
+      <section id="clousers">
         <h4><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures">Clousers</a></h4>
-        <p>Domknięcie daje dostęp z funkcji wewnętrznej do zasięgu funkcji zewnętrznej.</p>
+        <p>Domknięcie daje dostęp do zakresu(scope'u) funkcji zewnętrznej z funkcji wewenętrznej.</p>
+        <p>Domknięcie tworzone jest w momencie tworzenia funkcji.</p>
       </section>
       <section id="clousers">
         <h4>Clousers</h4>
-        <pre class="fragment fade-right"><code class="javascript hljs">function makeFunc() {
-	var name = "Mozilla";
-	function displayName() {
-		alert(name);
+        <pre class="fragment fade-right"><code class="javascript hljs">function functionFactory() {
+	var name = "Marcin";
+	function sayHello() {
+		console.log(name);
 	}
-	return displayName;
+	return sayHello;
 }
  
-var myFunc = makeFunc();</code>myFunc();</pre>
+var returnedFunction = functionFactory();
+returnedFunction();</code></pre>
       </section>
       <section id="hoisting">
         <p><a href="https://developer.mozilla.org/pl/docs/Glossary/Hoisting">Hoisting</a> to mechanizm w języku JavaScript, polegający na deklarowaniu zmiennych i funkcji przed właściwym wykonaniem kodu.</p>
