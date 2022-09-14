@@ -25,7 +25,7 @@ section#scope
 			| }
 			| fn();
 			| console.log(test); // test is not defined
-			
+
 section#clousers
 	h4 Zwracanie funkcji z funkcji
 	pre.fragment.fade-right
@@ -36,9 +36,9 @@ section#clousers
 			| 	}
 			| 	return sayHello;
 			| }
-			| 
+			|
 			| var returnedFunction = giveMeFunction();
-			| returnedFunction();			
+			| returnedFunction();
 section#clousers
 	h4 Zwracanie funkcji z funkcji
 	pre.fragment.fade-right
@@ -48,9 +48,9 @@ section#clousers
 			| 		console.log("Hello");
 			| 	}
 			| }
-			| 
+			|
 			| var returnedFunction = giveMeFunction();
-			| returnedFunction();			
+			| returnedFunction();
 section#clousers
 	h4 Zwracanie funkcji z funkcji
 	pre.fragment.fade-right
@@ -58,7 +58,7 @@ section#clousers
 			| function giveMeFunction() {
 			| 	return () => console.log("Hello");
 			| }
-			| 
+			|
 			| var returnedFunction = giveMeFunction();
 			| returnedFunction();
 section#clousers
@@ -78,7 +78,7 @@ section#clousers
 			| 	}
 			| 	return sayHello;
 			| }
-			| 
+			|
 			| var returnedFunction = functionFactory();
 			| returnedFunction();
 section#hoisting
@@ -95,5 +95,5 @@ section#hoisting
 section#hoisting
 	p.fragment.fade-right var przed przypisaniem wartości będzie zawsze równy undefined
 	p.fragment.fade-right funkcja jest gotowa do wywołania
-	p.fragment.fade-right funkcja jest gotowa do użycia
+	p.fragment.fade-right klasa jest gotowa do użycia
 	p.fragment.fade-right przy próbie wykorzystania let i const dostaniemy Reference Error
