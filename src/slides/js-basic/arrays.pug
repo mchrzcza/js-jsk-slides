@@ -4,17 +4,21 @@ section#arrys
 	p Każda taka funkcja przyjmuje callback, który jest wywoływany dla każdego elementu talbicy.
 	p Operacje te zwracają nową tablicę i nie modyfikują istniejącej.
 section
-	h4 Podstawowe funckje na tablicach
+	h4 Podstawowe funkcje na tablicach
 	pre.fragment.fade-in.small-pre.margined(data-fragment-index='1')
 		code.javascript.hljs(data-noescape)
 			| const data = [1,2,3,4];
 			| data.forEach((val,index) => console.log(`Value ${val}, is on index ${index}));
+section
+	h4 Podstawowe funkcje na tablicach
 	pre.fragment.fade-in.small-pre.margined(data-fragment-index='2')
 		code.javascript.hljs(data-noescape)
 			| const data = [1,2,3,4];
 			| data.map((val,index) => val * index);
 			span.fragment.fade-out.display-none(data-fragment-index='3') // ???
 			span.fragment.fade-in(data-fragment-index='3') // [0, 2, 6, 12]
+section
+	h4 Podstawowe funkcje na tablicach
 	pre.fragment.fade-in.small-pre.margined(data-fragment-index='4')
 		code.javascript.hljs(data-noescape)
 			| const data = [{}, '', 15, null];
@@ -22,6 +26,8 @@ section
 			| data.filter(callback);
 			span.fragment.fade-out.display-none(data-fragment-index='5') // ???
 			span.fragment.fade-in(data-fragment-index='5') // [15]
+section
+	h4 Podstawowe funkcje na tablicach
 	pre.fragment.fade-in.small-pre.margined(data-fragment-index='6')
 		code.javascript.hljs(data-noescape)
 			| const data = ["Java", "JavaScript", "StarterKit", "Capgemini"];
