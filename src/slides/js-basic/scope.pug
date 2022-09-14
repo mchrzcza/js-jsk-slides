@@ -25,25 +25,62 @@ section#scope
 			| }
 			| fn();
 			| console.log(test); // test is not defined
+			
+section#clousers
+	h4 Zwracanie funkcji z funkcji
+	pre.fragment.fade-right
+		code.javascript.hljs
+			| function giveMeFunction() {
+			| 	function sayHello() {
+			| 		console.log("Hello");
+			| 	}
+			| 	return sayHello;
+			| }
+			| 
+			| var returnedFunction = giveMeFunction();
+			| returnedFunction();			
+section#clousers
+	h4 Zwracanie funkcji z funkcji
+	pre.fragment.fade-right
+		code.javascript.hljs
+			| function giveMeFunction() {
+			| 	return function() {
+			| 		console.log("Hello");
+			| 	}
+			| }
+			| 
+			| var returnedFunction = giveMeFunction();
+			| returnedFunction();			
+section#clousers
+	h4 Zwracanie funkcji z funkcji
+	pre.fragment.fade-right
+		code.javascript.hljs
+			| function giveMeFunction() {
+			| 	return () => console.log("Hello");
+			| }
+			| 
+			| var returnedFunction = giveMeFunction();
+			| returnedFunction();
 section#clousers
 	h4
 		a(href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures') Clousers
 		|
-	p Domknięcie daje dostęp z funkcji wewnętrznej do zasięgu funkcji zewnętrznej.
+	p Domknięcie daje dostęp do zakresu(scope'u) funkcji zewnętrznej z funkcji wewenętrznej.
+	p Domknięcie tworzone jest w momencie tworzenia funkcji.
 section#clousers
 	h4 Clousers
 	pre.fragment.fade-right
 		code.javascript.hljs
-			| function makeFunc() {
-			| 	var name = "Mozilla";
-			| 	function displayName() {
-			| 		alert(name);
+			| function functionFactory() {
+			| 	var name = "Marcin";
+			| 	function sayHello() {
+			| 		console.log(name);
 			| 	}
-			| 	return displayName;
+			| 	return sayHello;
 			| }
 			| 
-			| var myFunc = makeFunc();
-		| myFunc();
+			| var returnedFunction = functionFactory();
+			| returnedFunction();
 section#hoisting
 	p
 		a(href='https://developer.mozilla.org/pl/docs/Glossary/Hoisting') Hoisting
