@@ -292,14 +292,23 @@ Object.values(car);<span class="fragment fade-out display-none" data-fragment-in
         <p>Operacje te zwracają nową tablicę i nie modyfikują istniejącej.</p>
       </section>
       <section>
-        <h4>Podstawowe funckje na tablicach</h4>
+        <h4>Podstawowe funkcje na tablicach</h4>
         <pre class="fragment fade-in small-pre margined" data-fragment-index="1"><code class="javascript hljs" data-noescape="data-noescape">const data = [1,2,3,4];
 data.forEach((val,index) => console.log(`Value ${val}, is on index ${index}));</code></pre>
+      </section>
+      <section>
+        <h4>Podstawowe funkcje na tablicach</h4>
         <pre class="fragment fade-in small-pre margined" data-fragment-index="2"><code class="javascript hljs" data-noescape="data-noescape">const data = [1,2,3,4];
 data.map((val,index) => val * index);<span class="fragment fade-out display-none" data-fragment-index="3">// ???</span><span class="fragment fade-in" data-fragment-index="3">// [0, 2, 6, 12]</span></code></pre>
+      </section>
+      <section>
+        <h4>Podstawowe funkcje na tablicach</h4>
         <pre class="fragment fade-in small-pre margined" data-fragment-index="4"><code class="javascript hljs" data-noescape="data-noescape">const data = [{}, '', 15, null];
 const callback = (val) => typeof val === "number" || typeof val === "undefined";
 data.filter(callback);<span class="fragment fade-out display-none" data-fragment-index="5">// ???</span><span class="fragment fade-in" data-fragment-index="5">// [15]</span></code></pre>
+      </section>
+      <section>
+        <h4>Podstawowe funkcje na tablicach</h4>
         <pre class="fragment fade-in small-pre margined" data-fragment-index="6"><code class="javascript hljs" data-noescape="data-noescape">const data = ["Java", "JavaScript", "StarterKit", "Capgemini"];
 data.find(val => val.length > 4);<span class="fragment fade-out display-none" data-fragment-index="7">// ???</span><span class="fragment fade-in" data-fragment-index="7">//  "JavaScript"</span></code></pre>
       </section>
