@@ -83,8 +83,8 @@ section#clousers
 			| returnedFunction();
 section#hoisting
 	p
-		a(href='https://developer.mozilla.org/pl/docs/Glossary/Hoisting') Hoisting
-		|  to mechanizm w języku JavaScript, polegający na deklarowaniu zmiennych i funkcji przed właściwym wykonaniem kodu.
+		a(href='https://developer.mozilla.org/en-US/docs/Glossary/Hoisting') Hoisting
+		|  Hoisting to proces, którego efektem jest "wyciąganie" deklaracji funkcji, zmiennych i class na samą górę scope'u, przed wykonaniem kodu.
 	pre.fragment.fade-right
 		code.javascript.hljs
 			| function fn() {
@@ -93,8 +93,7 @@ section#hoisting
 			| 	console.log(test); // "Test"
 			| }
 section#hoisting
-	p.fragment.fade-right Hoisting działa dla var i funkcji
 	p.fragment.fade-right var przed przypisaniem wartości będzie zawsze równy undefined
 	p.fragment.fade-right funkcja jest gotowa do wywołania
-	p.fragment.fade-right Hoisting nie działa w przypadku let oraz const.
-	p.fragment.fade-right Dla let i const dostaniemy Reference Error.
+	p.fragment.fade-right funkcja jest gotowa do użycia
+	p.fragment.fade-right przy próbie wykorzystania let i const dostaniemy Reference Error
